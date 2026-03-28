@@ -1,0 +1,1598 @@
+[
+    {
+        "id": "ts-kalyana-lakshmi",
+        "title": "Kalyana Lakshmi / Shaadi Mubarak",
+        "government": "Telangana",
+        "category": "Welfare",
+        "description": "Financial assistance of ₹1,00,116 for the marriage of girls from BPL families.",
+        "benefits": "One-time grant of ₹1,00,116",
+        "criteria": {
+            "state_resident": "Telangana",
+            "min_age": 18,
+            "gender": "Female",
+            "max_income_rural": 150000,
+            "max_income_urban": 200000,
+            "categories": [
+                "SC",
+                "ST",
+                "BC",
+                "EBC",
+                "Minority"
+            ],
+            "bpl_required": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Birth Certificate",
+            "Income Certificate",
+            "Caste Certificate",
+            "Wedding Card",
+            "Bank Passbook"
+        ],
+        "confidence_weight": {
+            "income": 0.4,
+            "caste": 0.3,
+            "age": 0.3
+        }
+    },
+    {
+        "id": "ts-mahalakshmi",
+        "title": "Mahalakshmi Scheme",
+        "government": "Telangana",
+        "category": "Welfare",
+        "description": "Monthly financial assistance for women and gas cylinders at ₹500.",
+        "benefits": "₹2,500 monthly and Gas Cylinder for ₹500",
+        "criteria": {
+            "state_resident": "Telangana",
+            "min_age": 18,
+            "gender": "Female",
+            "max_income": 200000,
+            "ration_card_required": "White",
+            "is_taxpayer": false,
+            "is_govt_employee": false
+        },
+        "documents": [
+            "Aadhaar Card",
+            "White Ration Card",
+            "LPG Connection Details",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "income": 0.5,
+            "ration_card": 0.5
+        }
+    },
+    {
+        "id": "ts-indiramma-housing",
+        "title": "Indiramma Housing Scheme",
+        "government": "Telangana",
+        "category": "Housing",
+        "description": "Financial assistance of ₹5 lakh for building a house on own site or for homeless families.",
+        "benefits": "₹5,00,000 for house construction; ₹6,00,000 for SC/ST",
+        "criteria": {
+            "state_resident": "Telangana",
+            "homeless": true,
+            "max_income": 200000
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Income Certificate",
+            "Land Documents (if available)",
+            "Food Security Card"
+        ],
+        "confidence_weight": {
+            "income": 0.6,
+            "housing_status": 0.4
+        }
+    },
+    {
+        "id": "ts-rythu-bharosa-2026",
+        "title": "Rythu Bharosa (2025-26 Edition)",
+        "government": "Telangana",
+        "category": "Agriculture",
+        "description": "Investment assistance to farmers and bonus on superfine rice.",
+        "benefits": "₹15,000 per acre per year; ₹500/quintal bonus on superfine rice",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_farmer": true,
+            "is_tenant_farmer": true,
+            "land_owner": true
+        },
+        "documents": [
+            "Land Passbook",
+            "Aadhaar Card",
+            "Bank Account",
+            "Tenant Agreement (if applicable)"
+        ],
+        "confidence_weight": {
+            "land_ownership": 0.8,
+            "occupation": 0.2
+        }
+    },
+    {
+        "id": "ts-dalit-bandhu",
+        "title": "Dalit Bandhu",
+        "government": "Telangana",
+        "status": "discontinued",
+        "category": "Economic Empowerment",
+        "description": "NOTE: This scheme is no longer being implemented and has been discontinued.",
+        "benefits": "Service discontinued",
+        "criteria": {
+            "state_resident": "Telangana",
+            "categories": [
+                "SC"
+            ]
+        },
+        "documents": [
+            "Aadhaar Card",
+            "SC Caste Certificate",
+            "Native Certificate"
+        ],
+        "confidence_weight": {
+            "caste": 0.0
+        }
+    },
+    {
+        "id": "ts-gruha-jyothi",
+        "title": "Gruha Jyothi",
+        "government": "Telangana",
+        "category": "Energy",
+        "description": "Zero electricity bills for households consuming up to 200 units.",
+        "benefits": "Free electricity up to 200 units monthly",
+        "criteria": {
+            "state_resident": "Telangana",
+            "max_units_consumed": 200,
+            "ration_card_required": "White"
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Electricity Bill",
+            "Consumer ID",
+            "Ration Card"
+        ],
+        "confidence_weight": {
+            "consumption": 0.7,
+            "ration_card": 0.3
+        }
+    },
+    {
+        "id": "ts-bc-1-lakh",
+        "title": "BC 1 Lakh Scheme",
+        "government": "Telangana",
+        "category": "Self-Employment",
+        "description": "Financial aid for BC/OBC communities pursuing caste-based occupations.",
+        "benefits": "₹1,00,000 grant for equipment and tools",
+        "criteria": {
+            "state_resident": "Telangana",
+            "categories": [
+                "BC",
+                "OBC"
+            ],
+            "min_age": 18,
+            "max_age": 55,
+            "max_income_rural": 150000,
+            "max_income_urban": 200000
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Caste Certificate",
+            "Income Certificate",
+            "Occupation Proof"
+        ],
+        "confidence_weight": {
+            "income": 0.4,
+            "age": 0.3,
+            "caste": 0.3
+        }
+    },
+    {
+        "id": "ts-yuva-vikasam-2026",
+        "title": "Yuva Vikasam (Rajeev Youth Development)",
+        "government": "Telangana",
+        "category": "Education / Skill",
+        "description": "Financial assistance for unemployed youth and skill development.",
+        "benefits": "₹5,00,000 assistance + Skill training fund",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_unemployed": true,
+            "categories": [
+                "SC",
+                "ST",
+                "BC",
+                "Minority"
+            ],
+            "min_age": 18,
+            "max_age": 35
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Educational Certificates",
+            "Community Certificate"
+        ],
+        "confidence_weight": {
+            "status": 0.5,
+            "age": 0.3,
+            "caste": 0.2
+        }
+    },
+    {
+        "id": "ts-cheyutha-2026",
+        "title": "Cheyutha Pension (2025-26)",
+        "government": "Telangana",
+        "category": "Social Security",
+        "description": "Monthly pension for elderly, widows, and other vulnerable groups.",
+        "benefits": "Monthly pension of ₹4,000",
+        "criteria": {
+            "state_resident": "Telangana",
+            "min_age": 57,
+            "bpl_required": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Age Proof",
+            "Disability/Widow Proof"
+        ],
+        "confidence_weight": {
+            "age": 0.6,
+            "bpl_status": 0.4
+        }
+    },
+    {
+        "id": "pm-kisan",
+        "title": "PM-KISAN",
+        "government": "Central",
+        "category": "Agriculture",
+        "description": "Income support to all landholding farmer families across the country.",
+        "benefits": "₹6,000 per year in three installments",
+        "criteria": {
+            "occupation": "Farmer",
+            "land_owner": true,
+            "is_institutional_holder": false,
+            "is_taxpayer": false
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records",
+            "Bank Account Details"
+        ],
+        "confidence_weight": {
+            "land_ownership": 0.7,
+            "taxpayer_status": 0.3
+        }
+    },
+    {
+        "id": "ayushman-bharat-2026",
+        "title": "Ayushman Bharat (PM-JAY) 2026",
+        "government": "Central",
+        "category": "Health",
+        "description": "Free health insurance specialized for seniors in 2026.",
+        "benefits": "₹5,00,000 family cover + Top-up for 70+ seniors",
+        "criteria": {
+            "senior_citizen_above_70": true,
+            "bpl_required_if_under_70": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Ration Card",
+            "Ayushman Card"
+        ],
+        "confidence_weight": {
+            "age": 0.8,
+            "bpl_status": 0.2
+        }
+    },
+    {
+        "id": "pm-surya-ghar",
+        "title": "PM Surya Ghar Muft Bijli Yojana",
+        "government": "Central",
+        "category": "Energy",
+        "description": "Rooftop solarization for households to provide free electricity.",
+        "benefits": "Up to 300 units of free electricity per month",
+        "criteria": {
+            "own_house": true,
+            "suitable_rooftop": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Electricity Bill",
+            "Consumer Number",
+            "Property Documents"
+        ],
+        "confidence_weight": {
+            "rooftop_availability": 1.0
+        }
+    },
+    {
+        "id": "pm-dhan-dhaanya-2026",
+        "title": "PM Dhan-Dhaanya Krishi Yojana (PM-DDKY)",
+        "government": "Central",
+        "category": "Agriculture",
+        "description": "Yield support mission for 100 targeted districts.",
+        "benefits": "Enhanced yield support, cold storage, ₹5L KCC limit",
+        "criteria": {
+            "is_in_targeted_district": true,
+            "is_farmer": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records",
+            "KCC Card"
+        ],
+        "confidence_weight": {
+            "location": 0.6,
+            "occupation": 0.4
+        }
+    },
+    {
+        "id": "pm-internship-2026",
+        "title": "PM Internship Scheme (Phase 2)",
+        "government": "Central",
+        "category": "Employment",
+        "description": "Structured internship opportunities for youth.",
+        "benefits": "₹5,000 monthly stipend + ₹6,000 one-time grant",
+        "criteria": {
+            "min_age": 21,
+            "max_age": 24,
+            "is_not_full_time_employed": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Education Certificates",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "age": 1.0
+        }
+    },
+    {
+        "id": "pm-vishwa-karma-2026",
+        "title": "PM Vishwakarma",
+        "government": "Central",
+        "category": "Skill / Artisans",
+        "description": "End-to-end support for traditional artisans.",
+        "benefits": "Stipend, tools kit, credit support up to ₹3L",
+        "criteria": {
+            "is_artisan": true,
+            "min_age": 18
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Bank Account",
+            "Trade Certificate"
+        ],
+        "confidence_weight": {
+            "trade": 1.0
+        }
+    },
+    {
+        "id": "ts-rythu-bima",
+        "title": "Rythu Bima",
+        "government": "Telangana",
+        "category": "Agriculture / Insurance",
+        "description": "Group Life Insurance Scheme for farmers to provide financial security to their families.",
+        "benefits": "₹5,00,000 life insurance cover (entire premium paid by Govt)",
+        "criteria": {
+            "state_resident": "Telangana",
+            "min_age": 18,
+            "max_age": 59,
+            "is_farmer": true,
+            "land_owner": true,
+            "max_land_size_acres": 5
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Pattadar Passbook",
+            "Bank Account",
+            "Nominee Details"
+        ],
+        "confidence_weight": {
+            "age": 0.5,
+            "land_ownership": 0.5
+        }
+    },
+    {
+        "id": "ts-sheep-distribution",
+        "title": "Sheep Distribution Scheme",
+        "government": "Telangana",
+        "category": "Livelihood",
+        "description": "Providing sheep units at a subsidized rate to the traditional shepherd communities.",
+        "benefits": "75% subsidy on ₹1,75,000 unit cost (20 sheep + 1 ram)",
+        "criteria": {
+            "state_resident": "Telangana",
+            "min_age": 18,
+            "categories": [
+                "Golla",
+                "Kuruma",
+                "Yadava"
+            ]
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Caste Certificate",
+            "Voter ID"
+        ],
+        "confidence_weight": {
+            "caste": 0.8,
+            "age": 0.2
+        }
+    },
+    {
+        "id": "ts-chenetha-lakshmi",
+        "title": "Chenetha Lakshmi / Weaver Welfare",
+        "government": "Telangana",
+        "category": "Welfare / Weavers",
+        "description": "Thrift-cum-savings and welfare scheme for handloom weavers and allied workers.",
+        "benefits": "Subsidy on looms, health insurance, and monthly financial assistance",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_weaver": true,
+            "min_age": 18,
+            "bpl_required": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Weaver Identity Card",
+            "Ration Card"
+        ],
+        "confidence_weight": {
+            "occupation": 0.9,
+            "residence": 0.1
+        }
+    },
+    {
+        "id": "ts-fee-reimbursement",
+        "title": "Fee Reimbursement Scheme (RTF)",
+        "government": "Telangana",
+        "category": "Education",
+        "description": "Post-Matric scholarship providing tuition fee reimbursement for professional and degree courses.",
+        "benefits": "Full tuition fee reimbursement for SC/ST and toppers; categorized for others",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_student": true,
+            "min_attendance_percent": 75,
+            "income_limits": {
+                "sc_st": 250000,
+                "bc_ebc_minority_rural": 150000,
+                "bc_ebc_minority_urban": 200000,
+                "disabled": 100000
+            }
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Income Certificate",
+            "Caste Certificate",
+            "Bonafide Certificate",
+            "CET Allotment Order"
+        ],
+        "confidence_weight": {
+            "income": 0.5,
+            "attendance": 0.3,
+            "caste": 0.2
+        }
+    },
+    {
+        "id": "ts-stree-nidhi",
+        "title": "Stree Nidhi",
+        "government": "Telangana",
+        "category": "Micro-Finance",
+        "description": "Credit facility for SHG women to support livelihood and emergency needs.",
+        "benefits": "Low-interest loans from ₹5,000 to ₹3,00,000 without collateral",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_shg_member": true,
+            "gender": "Female",
+            "income_status": "Low-income"
+        },
+        "documents": [
+            "Aadhaar Card",
+            "SHG Membership Proof",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "shg_membership": 1.0
+        }
+    },
+    {
+        "id": "ts-aarogyasri",
+        "title": "Rajiv Aarogyasri (2025-26)",
+        "government": "Telangana",
+        "category": "Health",
+        "description": "Cashless healthcare scheme covering major surgeries and treatments.",
+        "benefits": "Free medical treatment up to ₹10,00,000 per family per year",
+        "criteria": {
+            "state_resident": "Telangana",
+            "max_income": 500000,
+            "ration_card_required": "White"
+        },
+        "documents": [
+            "Aadhaar Card",
+            "White Ration Card",
+            "Aarogyasri Health Card"
+        ],
+        "confidence_weight": {
+            "income": 0.7,
+            "ration_card": 0.3
+        }
+    },
+    {
+        "id": "ts-farm-mechanization",
+        "title": "Farm Mechanization Scheme",
+        "government": "Telangana",
+        "category": "Agriculture",
+        "description": "Subsidizing agricultural machinery to reduce labor dependency.",
+        "benefits": "50% subsidy for women farmers; 40% for others on tractors/tools",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_farmer": true,
+            "land_owner": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records (RoR)",
+            "Bank Passbook"
+        ],
+        "confidence_weight": {
+            "occupation": 0.6,
+            "land_ownership": 0.4
+        }
+    },
+    {
+        "id": "ts-overseas-scholarship",
+        "title": "Ambedkar / Minority Overseas Vidya Nidhi",
+        "government": "Telangana",
+        "category": "Education",
+        "description": "Financial assistance for meritorious students to pursue PG/PhD abroad.",
+        "benefits": "Up to ₹20,00,000 grant + airfare and visa expenses",
+        "criteria": {
+            "state_resident": "Telangana",
+            "max_income": 500000,
+            "min_graduation_percent": 60,
+            "max_age": 35,
+            "categories": [
+                "SC",
+                "ST",
+                "BC",
+                "Minority"
+            ]
+        },
+        "documents": [
+            "Aadhaar Card",
+            "University Offer Letter",
+            "GRE/IELTS Scores",
+            "Caste Certificate",
+            "Income Certificate"
+        ],
+        "confidence_weight": {
+            "marks": 0.4,
+            "income": 0.3,
+            "admission_status": 0.3
+        }
+    },
+    {
+        "id": "pm-awas-yojana",
+        "title": "Pradhan Mantri Awas Yojana (PMAY)",
+        "government": "Central",
+        "category": "Housing",
+        "description": "Affordable housing for all with financial assistance for construction and interest subsidies.",
+        "benefits": "Financial assistance for house construction and interest subsidy on home loans",
+        "criteria": {
+            "first_time_home_buyer": true,
+            "max_income": 1800000,
+            "no_pucca_house": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Affidavit for no pucca house",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "income": 0.5,
+            "housing_status": 0.5
+        }
+    },
+    {
+        "id": "ts-indiramma-atmiya-bharosa",
+        "title": "Indiramma Atmiya Bharosa",
+        "government": "Telangana",
+        "category": "Agriculture / Welfare",
+        "description": "Financial assistance of ₹12,000 annually to farmers and landless agricultural laborers.",
+        "benefits": "₹12,000 per year (in two installments of ₹6,000 each)",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_farmer": true,
+            "is_landless_laborer": true,
+            "min_work_days_mgnregs": 20
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Pattadar Passbook (for land owners)",
+            "Bank Account",
+            "MGNREGS Job Card"
+        ],
+        "confidence_weight": {
+            "occupation": 0.6,
+            "residence": 0.4
+        }
+    },
+    {
+        "id": "ts-vaddileni-runalu",
+        "title": "Vaddileni Runalu (Interest-Free Loans)",
+        "government": "Telangana",
+        "category": "Agriculture / Finance",
+        "description": "Interest-free loans to farmers and SHGs to reduce the burden of debt.",
+        "benefits": "Interest-free crop loans up to ₹1 Lakh; Interest reimbursement for SHG loans up to ₹5 Lakh",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_farmer_or_shg_member": true,
+            "regular_repayment_history": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Bank Loan Documents",
+            "SHG Membership Proof",
+            "Land Records"
+        ],
+        "confidence_weight": {
+            "repayment_history": 0.8,
+            "occupation": 0.2
+        }
+    },
+    {
+        "id": "ts-drip-sprinkler-subsidy",
+        "title": "Drip & Sprinkler Subsidy (Micro Irrigation)",
+        "government": "Telangana",
+        "category": "Agriculture",
+        "description": "Subsidizing micro-irrigation systems to improve water efficiency and crop yields.",
+        "benefits": "100% subsidy for SC/ST; 90% for BC; 80% for Other Caste farmers",
+        "criteria": {
+            "state_resident": "Telangana",
+            "is_farmer": true,
+            "land_owner": true,
+            "max_land_size_acres": 12.5
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Pattadar Passbook",
+            "Title Deed",
+            "Caste Certificate"
+        ],
+        "confidence_weight": {
+            "caste": 0.5,
+            "land_ownership": 0.5
+        }
+    },
+    {
+        "id": "pm-jan-dhan-yojana",
+        "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "government": "Central",
+        "category": "Finance / Banking",
+        "description": "National Mission for Financial Inclusion to ensure access to financial services.",
+        "benefits": "Zero balance account, ₹2L accident insurance, ₹10,000 overdraft facility",
+        "criteria": {
+            "min_age": 10,
+            "is_indian_citizen": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "PAN Card (Optional)",
+            "Voter ID / Passport"
+        ],
+        "confidence_weight": {
+            "citizenship": 1.0
+        }
+    },
+    {
+        "id": "pm-mudra-yojana",
+        "title": "Pradhan Mantri Mudra Yojana (PMMY)",
+        "government": "Central",
+        "category": "Finance / Business",
+        "description": "Loans up to ₹20 Lakh to non-corporate, non-farm small/micro enterprises.",
+        "benefits": "Collateral-free loans in Shishu, Kishor, Tarun, and Tarun Plus categories",
+        "criteria": {
+            "is_entrepreneur": true,
+            "min_age": 18,
+            "max_age": 65,
+            "business_type": "Micro/Small Enterprise"
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Business Project Report",
+            "Proof of Identity/Address",
+            "Bank Statement"
+        ],
+        "confidence_weight": {
+            "business_nature": 0.7,
+            "age": 0.3
+        }
+    },
+    {
+        "id": "pm-atal-pension-yojana",
+        "title": "Atal Pension Yojana (APY)",
+        "government": "Central",
+        "category": "Social Security / Pension",
+        "description": "Pension scheme for citizens in the unorganized sector.",
+        "benefits": "Guaranteed monthly pension from ₹1,000 to ₹5,000 after 60 years",
+        "criteria": {
+            "min_age": 18,
+            "max_age": 40,
+            "is_taxpayer": false,
+            "is_indian_citizen": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Savings Bank Account Details"
+        ],
+        "confidence_weight": {
+            "age": 0.6,
+            "taxpayer_status": 0.4
+        }
+    },
+    {
+        "id": "pm-shram-yogi-maandhan",
+        "title": "Pradhan Mantri Shram Yogi Maandhan (PM-SYM)",
+        "government": "Central",
+        "category": "Social Security / Pension",
+        "description": "Pension scheme for unorganized workers like street vendors, rickshaw pullers, etc.",
+        "benefits": "Assured monthly pension of ₹3,000 after 60 years",
+        "criteria": {
+            "min_age": 18,
+            "max_age": 40,
+            "max_monthly_income": 15000,
+            "is_unorganized_worker": true,
+            "is_member_epfo_esic_nps": false
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Savings Bank Account / Jan Dhan Account"
+        ],
+        "confidence_weight": {
+            "income": 0.5,
+            "age": 0.3,
+            "work_status": 0.2
+        }
+    },
+    {
+        "id": "pm-ujjwala-yojana",
+        "title": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+        "government": "Central",
+        "category": "Welfare / Clean Energy",
+        "description": "Providing clean cooking fuel (LPG) to women from low-income households.",
+        "benefits": "Deposit-free LPG connection + First refill and hotplate free",
+        "criteria": {
+            "min_age": 18,
+            "gender": "Female",
+            "bpl_required": true,
+            "already_has_lpg": false
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Ration Card / Deprivation Declaration",
+            "Bank Passbook"
+        ],
+        "confidence_weight": {
+            "income_status": 0.6,
+            "gender": 0.4
+        }
+    },
+    {
+        "id": "pm-matru-vandana-yojana",
+        "title": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+        "government": "Central",
+        "category": "Welfare / Maternal Health",
+        "description": "Maternity benefit scheme for pregnant and lactating mothers.",
+        "benefits": "₹5,000 for 1st child; ₹6,000 for 2nd child (if girl child)",
+        "criteria": {
+            "min_age": 19,
+            "is_mother": true,
+            "is_govt_employee": false
+        },
+        "documents": [
+            "Aadhaar Card",
+            "MCP Card (Mother and Child Protection)",
+            "Birth Certificate of Child",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "age": 0.5,
+            "pregnancy_status": 0.5
+        }
+    },
+    {
+        "id": "pm-sukanya-samriddhi-yojana",
+        "title": "Sukanya Samriddhi Yojana (SSY)",
+        "government": "Central",
+        "category": "Finance / Savings",
+        "description": "Small deposit scheme exclusively for the girl child to meet education & marriage expenses.",
+        "benefits": "High interest rate (8.2% currently) + Triple Tax Benefit (EEE)",
+        "criteria": {
+            "child_age_limit": 10,
+            "gender": "Female",
+            "max_accounts_per_family": 2
+        },
+        "documents": [
+            "Girl Child Birth Certificate",
+            "Guardian's Identity/Address Proof",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "age": 0.7,
+            "gender": 0.3
+        }
+    },
+    {
+        "id": "pm-fasal-bima-yojana",
+        "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+        "government": "Central",
+        "category": "Agriculture / Insurance",
+        "description": "Crop insurance scheme to provide financial support to farmers in case of crop failure.",
+        "benefits": "Insurance coverage at lower premiums (1.5% - 5%) against natural calamities",
+        "criteria": {
+            "is_farmer": true,
+            "notified_area_crop": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records / Tenancy Proof",
+            "Sowing Certificate",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "occupation": 0.8,
+            "location": 0.2
+        }
+    },
+    {
+        "id": "pm-soil-health-card",
+        "title": "Soil Health Card Scheme",
+        "government": "Central",
+        "category": "Agriculture",
+        "description": "Providing soil health cards to farmers once every 2 years to improve soil productivity.",
+        "benefits": "Free soil testing and recommendations for integrated nutrient management",
+        "criteria": {
+            "is_farmer": true,
+            "owns_agricultural_land": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records (Khata/Survey Number)"
+        ],
+        "confidence_weight": {
+            "occupation": 1.0
+        }
+    },
+    {
+        "id": "pm-kisan-credit-card",
+        "title": "Kisan Credit Card (KCC)",
+        "government": "Central",
+        "category": "Agriculture / Finance",
+        "description": "Timely and adequate credit to farmers for their agricultural needs.",
+        "benefits": "Loans up to ₹3 Lakh at effectively 4% interest (with timely repayment)",
+        "criteria": {
+            "is_farmer": true,
+            "min_age": 18,
+            "max_age": 75,
+            "includes_tenant_farmers": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Land Records",
+            "Pattadar Passbook",
+            "Bank Statement"
+        ],
+        "confidence_weight": {
+            "occupation": 0.7,
+            "land_ownership": 0.3
+        }
+    },
+    {
+        "id": "pm-kaushal-vikas-yojana",
+        "title": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+        "government": "Central",
+        "category": "Education / Skill",
+        "description": "Skill certification scheme to enable youth to take up industry-relevant skill training.",
+        "benefits": "Placement support, certification, and future-ready skill training (AI, Drones, 5G)",
+        "criteria": {
+            "min_age": 15,
+            "max_age": 45,
+            "is_unemployed_or_dropout": true,
+            "is_indian_citizen": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Educational Certificates",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "age": 0.6,
+            "status": 0.4
+        }
+    },
+    {
+        "id": "pm-nmmss-scholarship",
+        "title": "National Means-cum-Merit Scholarship (NMMSS)",
+        "government": "Central",
+        "category": "Education",
+        "description": "Scholarship for meritorious students of economically weaker sections to reduce dropout.",
+        "benefits": "₹12,000 per annum for students from Class 9 to Class 12",
+        "criteria": {
+            "max_family_income": 350000,
+            "min_marks_prev_class": 55,
+            "is_govt_school_student": true,
+            "is_current_class": 8
+        },
+        "documents": [
+            "Income Certificate",
+            "Caste Certificate (if applicable)",
+            "Class 7 Marksheet",
+            "Bonafide Certificate"
+        ],
+        "confidence_weight": {
+            "income": 0.5,
+            "academic_record": 0.5
+        }
+    },
+    {
+        "id": "pm-evidya",
+        "title": "PM eVIDYA",
+        "government": "Central",
+        "category": "Education",
+        "description": "Unified platform for all digital/online/on-air education to enable multi-mode access.",
+        "benefits": "Free access to e-content (DIKSHA), 200 Educational TV channels, and Podcasts",
+        "criteria": {
+            "is_student": true,
+            "is_indian_citizen": true
+        },
+        "documents": [
+            "Not required for basic access",
+            "Aadhaar Card (for specific certifying courses)"
+        ],
+        "confidence_weight": {
+            "student_status": 1.0
+        }
+    },
+    {
+        "id": "pm-stand-up-india",
+        "title": "Stand Up India Scheme",
+        "government": "Central",
+        "category": "Finance / Entrepreneurship",
+        "description": "Facilitating bank loans between ₹10 Lakh and ₹1 Crore to SC/ST or Women entrepreneurs.",
+        "benefits": "Loan for greenfield enterprises; covers up to 75% of project cost; repayment up to 7 years",
+        "criteria": {
+            "min_age": 18,
+            "target_groups": [
+                "SC",
+                "ST",
+                "Women"
+            ],
+            "business_type": "Greenfield (New Venture)"
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Caste Certificate",
+            "Project Report",
+            "Bank Statement"
+        ],
+        "confidence_weight": {
+            "category": 0.8,
+            "business_nature": 0.2
+        }
+    },
+    {
+        "id": "pm-day-nrlm",
+        "title": "Deendayal Antyodaya Yojana - NRLM",
+        "government": "Central",
+        "category": "Welfare / Livelihood",
+        "description": "Promoting sustainable livelihoods for the rural poor through Self-Help Groups (SHGs).",
+        "benefits": "Revolving Fund of ₹20,000-₹30,000; collateral-free loans up to ₹20 Lakh for SHGs",
+        "criteria": {
+            "is_rural_poor_woman": true,
+            "shg_member": true,
+            "active_shg_status": "6 months min"
+        },
+        "documents": [
+            "SHG Registration Proof",
+            "Aadhaar Card",
+            "SHG Meeting Records"
+        ],
+        "confidence_weight": {
+            "shg_status": 0.7,
+            "location": 0.3
+        }
+    },
+    {
+        "id": "pm-day-nulm",
+        "title": "Deendayal Antyodaya Yojana - NULM",
+        "government": "Central",
+        "category": "Welfare / Livelihood",
+        "description": "Reducing poverty and vulnerability of urban poor households.",
+        "benefits": "Skill training; subsidy on interest for self-employment loans; support for street vendors",
+        "criteria": {
+            "is_urban_poor": true,
+            "max_family_income": 300000,
+            "min_age": 18
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Urban Resident Proof",
+            "Income Certificate"
+        ],
+        "confidence_weight": {
+            "income": 0.6,
+            "location": 0.4
+        }
+    },
+    {
+        "id": "pmgsy-infrastructure",
+        "title": "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
+        "government": "Central",
+        "category": "Infrastructure / Community",
+        "description": "Nationwide program to provide all-weather road connectivity to unconnected rural habitations.",
+        "benefits": "Year-round access to markets, schools, and hospitals for the entire village",
+        "criteria": {
+            "village_population_plain": 500,
+            "village_population_hilly": 250,
+            "is_unconnected_habitation": true
+        },
+        "documents": [
+            "Community Recommendation",
+            "Village Survey Report"
+        ],
+        "confidence_weight": {
+            "location_status": 1.0
+        }
+    },
+    {
+        "id": "pm-garib-kalyan-anna-yojana",
+        "title": "Pradhan Mantri Garib Kalyan Anna Yojana (PMGKAY)",
+        "government": "Central",
+        "category": "Welfare / Food Security",
+        "description": "Free food grain distribution to the poor, extended until December 2028.",
+        "benefits": "5 kg of free food grain per person per month (for PHH) or 35 kg per family (for AAY)",
+        "criteria": {
+            "has_ration_card": true,
+            "category": [
+                "AAY",
+                "PHH"
+            ]
+        },
+        "documents": [
+            "Ration Card",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "ration_card_type": 1.0
+        }
+    },
+    {
+        "id": "national-social-assistance-programme",
+        "title": "National Social Assistance Programme (NSAP)",
+        "government": "Central",
+        "category": "Social Security / Pension",
+        "description": "Financial assistance to the elderly, widows, and persons with disabilities.",
+        "benefits": "Monthly pension (₹200 - ₹500 central share + state top-up); ₹20,000 lump sum for family bereavement",
+        "criteria": {
+            "bpl_status": true,
+            "age_for_old_age": 60,
+            "age_for_widow": 40,
+            "disability_percent_min": 80
+        },
+        "documents": [
+            "BPL Card",
+            "Aadhaar Card",
+            "Death Certificate (for NFBS)",
+            "Disability Certificate"
+        ],
+        "confidence_weight": {
+            "bpl_status": 0.5,
+            "age": 0.3,
+            "disability": 0.2
+        }
+    },
+    {
+        "id": "pm-svanidhi",
+        "title": "PM SVANidhi",
+        "government": "Central",
+        "category": "Finance / Business",
+        "description": "Micro-credit facility for street vendors to restart their livelihoods.",
+        "benefits": "Collateral-free working capital loan up to ₹80,000 (across 3 tranches); 7% interest subsidy",
+        "criteria": {
+            "is_street_vendor": true,
+            "vending_certificate_required": true
+        },
+        "documents": [
+            "Vending Certificate (ULB)",
+            "Aadhaar Card",
+            "Letter of Recommendation (optional)"
+        ],
+        "confidence_weight": {
+            "occupation": 1.0
+        }
+    },
+    {
+        "id": "digital-india-programs",
+        "title": "Digital India (CSC & PM-WANI)",
+        "government": "Central",
+        "category": "Infrastructure / Digital",
+        "description": "Transformation of India into a digitally empowered society through public access points.",
+        "benefits": "Access to 400+ G2C/B2C services via CSC; Affordable high-speed Wi-Fi at PDOs",
+        "criteria": {
+            "is_indian_citizen": true,
+            "resides_in_india": true
+        },
+        "documents": [
+            "Aadhaar Card (for specific services)"
+        ],
+        "confidence_weight": {
+            "citizenship": 1.0
+        }
+    },
+    {
+        "id": "skill-india-mission",
+        "title": "Skill India Mission (DDU-GKY / PMKK)",
+        "government": "Central",
+        "category": "Education / Skill",
+        "description": "Empowering youth with industry-relevant skills for better livelihoods.",
+        "benefits": "Placement-linked training; Free vocational courses; Industry-recognized certificates",
+        "criteria": {
+            "min_age": 15,
+            "max_age": 35,
+            "is_unemployed_youth": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Educational Certificates",
+            "Bank Account"
+        ],
+        "confidence_weight": {
+            "age": 0.6,
+            "employment_status": 0.4
+        }
+    },
+    {
+        "id": "national-apprenticeship-promotion",
+        "title": "National Apprenticeship Promotion Scheme (NAPS)",
+        "government": "Central",
+        "category": "Education / Skill",
+        "description": "Promoting apprenticeship training by sharing the cost of stipend with employers.",
+        "benefits": "Government provides 25% of stipend (max ₹1,500/month) directly to apprentices",
+        "criteria": {
+            "min_age": 14,
+            "max_age_for_grant": 35,
+            "is_trainee": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Educational Qualification Proof",
+            "Bank Account (for DBT)"
+        ],
+        "confidence_weight": {
+            "age": 0.7,
+            "status": 0.3
+        }
+    },
+    {
+        "id": "pm-jeevan-jyoti-bima",
+        "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+        "government": "Central",
+        "category": "Social Security / Insurance",
+        "description": "One-year life insurance scheme, renewable from year to year.",
+        "benefits": "Life cover of ₹2 Lakh on death due to any reason for a premium of ₹436/year",
+        "criteria": {
+            "min_age": 18,
+            "max_age": 50,
+            "has_bank_account": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Bank Passbook (for auto-debit)"
+        ],
+        "confidence_weight": {
+            "age": 1.0
+        }
+    },
+    {
+        "id": "pm-suraksha-bima",
+        "title": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+        "government": "Central",
+        "category": "Social Security / Insurance",
+        "description": "Accident insurance scheme offering death and disability cover.",
+        "benefits": "₹2 Lakh for death/total disability; ₹1 Lakh for partial disability; Premium ₹20/year",
+        "criteria": {
+            "min_age": 18,
+            "max_age": 70,
+            "has_bank_account": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Bank Passbook (for auto-debit)"
+        ],
+        "confidence_weight": {
+            "age": 1.0
+        }
+    },
+    {
+        "id": "onorc-scheme",
+        "title": "One Nation One Ration Card (ONORC)",
+        "government": "Central / State",
+        "category": "Welfare / Migrants",
+        "description": "Technology-driven scheme for nationwide portability of ration cards.",
+        "benefits": "Migrants can buy subsidized food anywhere in India using their home state's ration card",
+        "criteria": {
+            "has_pds_ration_card": true,
+            "is_migrant_worker": true,
+            "aadhaar_linked": true
+        },
+        "documents": [
+            "Ration Card",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "aadhaar_linkage": 1.0
+        }
+    },
+    {
+        "id": "nep-2020-initiatives",
+        "title": "NEP 2020 Initiatives (NIPUN Bharat / PM-SHRI)",
+        "government": "Central",
+        "category": "Education",
+        "description": "Reforming school education with focus on foundational literacy and exemplar schools.",
+        "benefits": "Focus on FLN for Grades 1-3; Upgraded school infrastructure and digital pedagogy",
+        "criteria": {
+            "is_student": true,
+            "is_teacher": true,
+            "grade_focus": "Grades 1-12"
+        },
+        "documents": [
+            "School ID Card",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "student_status": 1.0
+        }
+    },
+    {
+        "id": "pm-cares-for-children",
+        "title": "PM CARES for Children",
+        "government": "Central",
+        "category": "Welfare / Social Security",
+        "description": "Support to children who lost parents/guardians to the COVID-19 pandemic.",
+        "benefits": "₹10 Lakh corpus at age 18; Monthly stipend; ₹5 Lakh healthcare insurance",
+        "criteria": {
+            "lost_parents_covid": true,
+            "max_age_at_event": 18,
+            "event_dates_range": "March 2020 - Dec 2021"
+        },
+        "documents": [
+            "Death Certificate of parents",
+            "Aadhaar Card",
+            "Guardianship Proof"
+        ],
+        "confidence_weight": {
+            "eligibility_event": 1.0
+        }
+    },
+    {
+        "id": "pm-gati-shakti",
+        "title": "PM Gati Shakti",
+        "government": "Central",
+        "category": "Infrastructure / Logistics",
+        "description": "National Master Plan for Multi-modal Connectivity to reduce logistics costs and improve infrastructure coordination.",
+        "benefits": "Reduced transport time; integrated planning for businesses; improved last-mile connectivity",
+        "criteria": {
+            "business_owner": true,
+            "logistics_sector": true
+        },
+        "documents": [
+            "Business Registration",
+            "Project Proposal (for specific grants)"
+        ],
+        "confidence_weight": {
+            "sector": 1.0
+        }
+    },
+    {
+        "id": "e-shram-portal",
+        "title": "e-Shram Portal",
+        "government": "Central",
+        "category": "Welfare / Social Security",
+        "description": "National database of unorganized workers to facilitate social security benefits.",
+        "benefits": "Accidental insurance (₹2 Lakh death/disability); portal acts as a single window for all welfare schemes",
+        "criteria": {
+            "unorganized_worker": true,
+            "min_age": 16,
+            "max_age": 59,
+            "not_epfo_member": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Bank Account",
+            "Mobile Number Linked with Aadhaar"
+        ],
+        "confidence_weight": {
+            "occupation_status": 0.8,
+            "age": 0.2
+        }
+    },
+    {
+        "id": "pm-kusum-yojana",
+        "title": "PM KUSUM Yojana",
+        "government": "Central",
+        "category": "Agriculture / Energy",
+        "description": "Solarization of agricultural pumps and setting up solar power plants on barren lands.",
+        "benefits": "60% subsidy (30% Central + 30% State) on solar pumps; income from selling surplus power (up to ₹25k-65k per acre)",
+        "criteria": {
+            "is_farmer": true,
+            "owns_agricultural_land": true,
+            "water_source_access": true
+        },
+        "documents": [
+            "Land Ownership Documents",
+            "Aadhaar Card",
+            "Bank Account",
+            "Passport Size Photos"
+        ],
+        "confidence_weight": {
+            "land_ownership": 0.7,
+            "occupation": 0.3
+        }
+    },
+    {
+        "id": "pm-matsya-sampada",
+        "title": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+        "government": "Central",
+        "category": "Agriculture / Fisheries",
+        "description": "Flagship scheme for focused and sustainable development of the fisheries sector.",
+        "benefits": "Financial aid for building hatcheries/units; insurance for fishermen; deep-sea fishing vessel support",
+        "criteria": {
+            "is_fisherman": true,
+            "is_fish_farmer": true,
+            "shg_fisheries": true
+        },
+        "documents": [
+            "Fisherman ID Card",
+            "Aadhaar Card",
+            "Land/Water body proof"
+        ],
+        "confidence_weight": {
+            "occupation": 1.0
+        }
+    },
+    {
+        "id": "pli-scheme",
+        "title": "Production Linked Incentive (PLI) Scheme",
+        "government": "Central",
+        "category": "Industry / Manufacturing",
+        "description": "Financial incentives to companies for incremental sales from products manufactured in India.",
+        "benefits": "4% to 6% cash incentive on incremental sales; support across 14 strategic sectors",
+        "criteria": {
+            "is_manufacturing_entity": true,
+            "meets_investment_threshold": true,
+            "operates_in_pli_sectors": true
+        },
+        "documents": [
+            "GST Certificate",
+            "Audited Financial Statements",
+            "Plant & Machinery Investment proof"
+        ],
+        "confidence_weight": {
+            "business_scale": 1.0
+        }
+    },
+    {
+        "id": "national-scholarship-portal",
+        "title": "National Scholarship Portal (NSP)",
+        "government": "Central",
+        "category": "Education",
+        "description": "One-stop solution for multiple scholarship schemes of Central and State governments.",
+        "benefits": "Direct Benefit Transfer (DBT) of scholarship amounts; streamlined application for 100+ schemes",
+        "criteria": {
+            "is_student": true,
+            "min_academic_marks": 50,
+            "max_family_income": 800000
+        },
+        "documents": [
+            "Previous Year Marksheet",
+            "Income Certificate",
+            "Aadhaar Card",
+            "Bonafide Student Certificate"
+        ],
+        "confidence_weight": {
+            "student_status": 0.6,
+            "marks": 0.2,
+            "income": 0.2
+        }
+    },
+    {
+        "id": "pmfme-scheme",
+        "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
+        "government": "Central",
+        "category": "Welfare / Food Processing",
+        "description": "Financial, technical and business support for the upgradation of micro food processing enterprises.",
+        "benefits": "35% credit-linked capital subsidy (max ₹10 Lakh); training and seed capital support for SHGs",
+        "criteria": {
+            "is_micro_food_enterprise": true,
+            "min_age": 18,
+            "min_education": "8th Pass"
+        },
+        "documents": [
+            "Udyam Registration",
+            "Aadhaar Card",
+            "Educational Qualification Certificate",
+            "Project Report"
+        ],
+        "confidence_weight": {
+            "occupation": 0.7,
+            "education": 0.3
+        }
+    },
+    {
+        "id": "national-career-service",
+        "title": "National Career Service (NCS)",
+        "government": "Central",
+        "category": "Welfare / Employment",
+        "description": "Unified portal providing a wide range of employment and career-related services.",
+        "benefits": "Job matching; Career counseling; AI-powered resume building; Access to skill-gap analysis",
+        "criteria": {
+            "job_seeker": true,
+            "employer": true,
+            "min_age": 14
+        },
+        "documents": [
+            "Aadhaar Card / Government ID",
+            "Educational Certificates"
+        ],
+        "confidence_weight": {
+            "job_seeker_status": 1.0
+        }
+    },
+    {
+        "id": "jal-jeevan-mission",
+        "title": "Jal Jeevan Mission (Har Ghar Jal)",
+        "government": "Central",
+        "category": "Infrastructure / Welfare",
+        "description": "Ensuring functional household tap connection to every rural household.",
+        "benefits": "Safe and adequate drinking water (55 lpcd) at home; improved health and time savings",
+        "criteria": {
+            "rural_household": true,
+            "no_existing_tap_connection": true
+        },
+        "documents": [
+            "Property Tax Receipt / Identity Proof",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "location": 1.0
+        }
+    },
+    {
+        "id": "pm-janaushadhi-yojana",
+        "title": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
+        "government": "Central",
+        "category": "Welfare / Health",
+        "description": "Making quality medicines available at affordable prices for all through special outlets.",
+        "benefits": "Branded quality generic medicines at 50% to 90% cheaper price than market",
+        "criteria": {
+            "is_indian_citizen": true
+        },
+        "documents": [
+            "Prescription (for specific drugs)",
+            "Aadhaar Card (optional for purchases)"
+        ],
+        "confidence_weight": {
+            "citizenship": 1.0
+        }
+    },
+    {
+        "id": "financial-inclusion-programme",
+        "title": "National Programme for Financial Inclusion (NPFI)",
+        "government": "Central",
+        "category": "Finance / Digital",
+        "description": "Universal access to financial services including banking, credit, and digital payments.",
+        "benefits": "Access to savings accounts; low-cost insurance; credit discipline; digital payment literacy",
+        "criteria": {
+            "is_unbanked": true,
+            "is_marginalized": true
+        },
+        "documents": [
+            "Aadhaar Card",
+            "Mobile Number"
+        ],
+        "confidence_weight": {
+            "income_status": 0.5,
+            "location": 0.5
+        }
+    },
+    {
+        "id": "national-sc-st-hub",
+        "title": "National SC-ST Hub Scheme",
+        "government": "Central",
+        "category": "Finance / Industry",
+        "description": "Comprehensive support system for SC/ST-owned MSMEs to help them compete in public procurement.",
+        "benefits": "25% capital subsidy (max ₹25 Lakh) on technology; reimbursements for various fees; market access support",
+        "criteria": {
+            "is_msme_owner": true,
+            "caste": [
+                "SC",
+                "ST"
+            ],
+            "ownership_percent_min": 51
+        },
+        "documents": [
+            "Caste Certificate",
+            "Udyam registration",
+            "Business Ownership Proof",
+            "Bank Loan Documents (for subsidy)"
+        ],
+        "confidence_weight": {
+            "caste": 0.6,
+            "business_scale": 0.4
+        }
+    },
+    {
+        "id": "national-creche-scheme",
+        "title": "National Creche Scheme (Palna)",
+        "government": "Central",
+        "category": "Welfare / Women",
+        "description": "Providing daycare facilities for children of working mothers to ensure holistic development.",
+        "benefits": "Daycare from 6 months to 6 years; supplementary nutrition; health check-ups; safe environment",
+        "criteria": {
+            "is_working_mother": true,
+            "child_age_range": "6 months to 6 years"
+        },
+        "documents": [
+            "Employment Proof of Mother",
+            "Child's Birth Certificate",
+            "Income Certificate (for fee slab)"
+        ],
+        "confidence_weight": {
+            "working_status": 0.7,
+            "child_age": 0.3
+        }
+    },
+    {
+        "id": "sakhi-niwas-hostel",
+        "title": "Sakhi Niwas (Working Women Hostel)",
+        "government": "Central",
+        "category": "Welfare / Women",
+        "description": "Safe and affordable accommodation for working women and students in urban/rural areas.",
+        "benefits": "Affordable housing; mess facilities; security; medical aid; stay for children (boys up to 12, girls up to 18)",
+        "criteria": {
+            "is_working_woman_or_student": true,
+            "max_monthly_income_metro": 50000,
+            "max_monthly_income_non_metro": 35000
+        },
+        "documents": [
+            "Employment Proof / Student ID",
+            "Income Certificate",
+            "Aadhaar Card"
+        ],
+        "confidence_weight": {
+            "income": 0.6,
+            "working_status": 0.4
+        }
+    },
+    {
+        "id": "national-family-benefit-scheme",
+        "title": "National Family Benefit Scheme (NFBS)",
+        "government": "Central",
+        "category": "Social Security / Welfare",
+        "description": "One-time lump sum assistance to BPL families on the death of the primary breadwinner.",
+        "benefits": "One-time payment of ₹20,000 (Central share, may vary by state)",
+        "criteria": {
+            "bpl_status": true,
+            "primary_breadwinner_deceased": true,
+            "breadwinner_age_at_death": "18 to 60 years"
+        },
+        "documents": [
+            "Death Certificate of Breadwinner",
+            "BPL Card",
+            "Aadhaar Card",
+            "Bank Passbook"
+        ],
+        "confidence_weight": {
+            "bpl_status": 0.6,
+            "age_at_event": 0.4
+        }
+    }
+]

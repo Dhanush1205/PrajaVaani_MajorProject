@@ -1,0 +1,3 @@
+﻿expressServer.ts(8,8): error TS1259: Module '"C:/Users/Chaitan/Downloads/PrajaVaani-1/node_modules/@types/express/index"' can only be default-imported using the 'esModuleInterop' flag
+expressServer.ts(9,8): error TS1259: Module '"C:/Users/Chaitan/Downloads/PrajaVaani-1/node_modules/@types/cors/index"' can only be default-imported using the 'esModuleInterop' flag
+expressServer.ts(10,8): error TS1259: Module '"path"' can only be default-imported using the 'esModuleInterop' flag

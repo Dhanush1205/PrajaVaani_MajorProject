@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # Main API Server
+  eligibility-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: prajavaani-eligibility-api
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      PORT: 5000
+    volumes:
+      - ./eligibilityChecker.ts:/app/eligibilityChecker.ts:ro
+      - ./expressServer.ts:/app/expressServer.ts:ro
+      - ./schemes_dataset.json:/app/schemes_dataset.json:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Optional: PostgreSQL for caching results (future use)
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: prajavaani-postgres
+  #   environment:
+  #     POSTGRES_USER: ${DB_USER:-prajavaani}
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-secret}
+  #     POSTGRES_DB: eligibility
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   restart: unless-stopped
+
+  # Optional: Redis for caching (future use)
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: prajavaani-redis
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
+
+volumes:
+  # postgres_data:
+
+networks:
+  default:
+    name: prajavaani-network
+    driver: bridge

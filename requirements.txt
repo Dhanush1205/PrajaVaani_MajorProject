@@ -1,0 +1,7 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+openai-whisper>=20230314
+gtts>=2.3.1
+pydantic>=2.0
+python-multipart>=0.0.6
+mtranslate>=1.5
