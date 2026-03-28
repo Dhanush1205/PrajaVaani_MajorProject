@@ -1869,8 +1869,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 width: 100%; padding: 0.9rem 1rem;
                 border: 2px solid #d4e4f7; border-radius: 8px;
                 font-size: 0.95rem; font-weight: 500; color: #1a3a52;
-                background: #ffffff; transition: all 0.3s ease;
-                font-family: inherit;
+                background: #ffffff !important; transition: all 0.3s ease;
+                font-family: inherit; -webkit-appearance: none;
             }
             .fre-input:focus, .fre-select:focus {
                 border-color: #4a90e2;
@@ -1920,7 +1920,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="font-size: 1.8rem;">🎓</span>
                     <h3 style="margin: 0; color: #1a3a52; font-size: 1.5rem; font-weight: 700;">Fee Reimbursement Estimator</h3>
                 </div>
-                <p style="color: #5a6c7d; font-size: 0.95rem; margin-top: 0.3rem; font-weight: 500;">📍 Telangana Scholarships | Estimate your fee reimbursement or stipend amount</p>
+                <p style="color: #5a6c7d; font-size: 0.95rem; margin-top: 0.3rem; font-weight: 500;">📍 Telangana Scholarships | Estimate your fee reimbursement amount</p>
 
                 <form id="fre-form" style="display: grid; gap: 1rem; margin-top: 1.5rem;">
                     <!-- Education Level -->
@@ -2062,6 +2062,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <!-- Documents -->
             <div id="fre-docs-container"></div>
+
+            <!-- Official Link (shown after result) -->
+            <div id="fre-link-container"></div>
         </div>
         `;
     }
@@ -2302,6 +2305,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             } else {
                 docsContainer.innerHTML = '';
+            }
+
+            // Show official link after docs
+            const linkContainer = document.getElementById('fre-link-container');
+            if (eligible) {
+                linkContainer.innerHTML = `
+                    <p style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #ffffff; font-weight: 500;">
+                        For more information, visit 
+                        <a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 700; text-decoration: none; border-bottom: 2px solid rgba(96, 165, 250, 0.3); transition: all 0.2s ease;" onmouseover="this.style.borderBottomColor='#60a5fa'; this.style.color='#93c5fd'" onmouseout="this.style.borderBottomColor='rgba(96, 165, 250, 0.3)'; this.style.color='#60a5fa'">telanganaepass.cgg.gov.in ↗</a>
+                    </p>
+                `;
+            } else {
+                linkContainer.innerHTML = '';
             }
 
             // Scroll to result
