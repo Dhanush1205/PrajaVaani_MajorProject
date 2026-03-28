@@ -164,6 +164,14 @@ async def get_css():
 async def get_js():
     return FileResponse("script.js")
 
+@app.get("/subsidyCalculator.js")
+async def get_subsidy_calculator_js():
+    return FileResponse("subsidyCalculator.js")
+
+@app.get("/schemes_dataset.json")
+async def get_schemes_dataset():
+    return FileResponse("schemes_dataset.json")
+
 @app.post("/api/text-query")
 async def text_query(request: Request):
     form = await request.form()
