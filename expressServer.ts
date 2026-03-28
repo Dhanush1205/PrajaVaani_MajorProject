@@ -9,12 +9,10 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import path from 'path';
 import bcrypt from 'bcrypt';
-import { OAuth2Client } from 'google-auth-library';
 import db, { runQuery, getQuery } from './database';
 import { checkEligibility, UserProfile, EligibilityResult } from './eligibilityChecker';
 
 const app = express();
-const googleClient = new OAuth2Client('652104115401-rn4orju05i3d48jitnfck7l04uu60q6o.apps.googleusercontent.com');
 const PORT = process.env.PORT || 5000;
 
 // ==================== MIDDLEWARE ====================
@@ -101,67 +99,7 @@ app.post('/api/login', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
-/**
- * POST /api/google-login
- * Verify Google Token and log in or register user
- */
-app.post('/api/google-login', async (req: Request, res: Response): Promise<void> => {
-  try {
-    const { token } = req.body;
-    if (!token) {
-      res.status(400).json({ error: 'No token provided' });
-      return;
-    }
 
-    // Verify token with placeholder client id, or skip if placeholder. 
-    // We will attempt local decode if client ID is placeholder for demo purposes, 
-    // but normally we use verifyIdToken.
-    let payload;
-    try {
-      const ticket = await googleClient.verifyIdToken({
-        idToken: token,
-        audience: '652104115401-rn4orju05i3d48jitnfck7l04uu60q6o.apps.googleusercontent.com',
-      });
-      payload = ticket.getPayload();
-    } catch (e) {
-      // If verification fails (e.g., due to placeholder client ID),
-      // Decode the JWT token directly for demonstration purposes.
-      // WARNING: This is INSECURE and ONLY for demonstration without a real client ID.
-      const base64Url = token.split('.')[1];
-      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-      const jsonPayload = Buffer.from(base64, 'base64').toString('utf8');
-      payload = JSON.parse(jsonPayload);
-    }
-
-    if (!payload || !payload.email) {
-      res.status(400).json({ error: 'Invalid Google token' });
-      return;
-    }
-
-    const { sub: google_id, email, name } = payload;
-
-    // Find existing user
-    let user = await getQuery('SELECT * FROM users WHERE email = ?', [email]);
-
-    if (user) {
-      if (!user.google_id) {
-        // Link account if registering via email previously
-        await runQuery('UPDATE users SET google_id = ? WHERE id = ?', [google_id, user.id]);
-      }
-    } else {
-      // Register new user
-      await runQuery('INSERT INTO users (name, email, google_id) VALUES (?, ?, ?)', [name || 'Google User', email, google_id]);
-      user = await getQuery('SELECT * FROM users WHERE email = ?', [email]);
-    }
-
-    const { password: _, ...userData } = user;
-    res.json({ success: true, user: userData });
-
-  } catch (error) {
-    console.error('Google login error:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
 
 /**
  * GET /api/health

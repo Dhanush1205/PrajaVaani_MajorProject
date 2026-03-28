@@ -4,7 +4,8 @@
         "title": "Kalyana Lakshmi / Shaadi Mubarak",
         "government": "Telangana",
         "category": "Welfare",
-        "description": "Financial assistance of ₹1,00,116 for the marriage of girls from BPL families.",
+        "apply_url": "https://telanganaepass.cgg.gov.in/KalyanaLakshmiLinks.jsp",
+        "description": "This Telangana Government scheme provides financial support for the marriage of girls from economically weaker families. It aims to prevent child marriages and alleviate the financial burden on BPL households during weddings.",
         "benefits": "One-time grant of ₹1,00,116",
         "criteria": {
             "state_resident": "Telangana",
@@ -40,7 +41,8 @@
         "title": "Mahalakshmi Scheme",
         "government": "Telangana",
         "category": "Welfare",
-        "description": "Monthly financial assistance for women and gas cylinders at ₹500.",
+        "apply_url": "https://www.telangana.gov.in/government-initiatives/",
+        "description": "Introduced by the Telangana Government, this initiative focuses on women's empowerment and affordable living. It provides subsidized gas cylinders and monthly financial aid to eligible women across the state.",
         "benefits": "₹2,500 monthly and Gas Cylinder for ₹500",
         "criteria": {
             "state_resident": "Telangana",
@@ -67,7 +69,8 @@
         "title": "Indiramma Housing Scheme",
         "government": "Telangana",
         "category": "Housing",
-        "description": "Financial assistance of ₹5 lakh for building a house on own site or for homeless families.",
+        "apply_url": "https://indirammaindlu.telangana.gov.in/",
+        "description": "This Telangana Government project aims to provide permanent housing for homeless families in both rural and urban areas. It offers financial assistance to eligible beneficiaries to construct secure and sustainable homes on their own sites.",
         "benefits": "₹5,00,000 for house construction; ₹6,00,000 for SC/ST",
         "criteria": {
             "state_resident": "Telangana",
@@ -90,8 +93,9 @@
         "title": "Rythu Bharosa (2025-26 Edition)",
         "government": "Telangana",
         "category": "Agriculture",
-        "description": "Investment assistance to farmers and bonus on superfine rice.",
-        "benefits": "₹15,000 per acre per year; ₹500/quintal bonus on superfine rice",
+        "apply_url": "https://rythubharosa.telangana.gov.in/",
+        "description": "A flagship agricultural initiative of the Telangana Government designed to support farmers with seasonal investment assistance. It helps farmers meet the costs of seeds, fertilizers, and other essential inputs for every crop season.",
+        "benefits": "₹12,000 per acre per year in 2 installments",
         "criteria": {
             "state_resident": "Telangana",
             "is_farmer": true,
@@ -115,7 +119,8 @@
         "government": "Telangana",
         "status": "discontinued",
         "category": "Economic Empowerment",
-        "description": "NOTE: This scheme is no longer being implemented and has been discontinued.",
+        "apply_url": "https://dalitbandhu.telangana.gov.in/",
+        "description": "NOTE: This Telangana Government scheme for the economic empowerment of SC families has been discontinued. It previously provided significant grants for entrepreneurship to help families achieve financial independence.",
         "benefits": "Service discontinued",
         "criteria": {
             "state_resident": "Telangana",
@@ -137,7 +142,7 @@
         "title": "Gruha Jyothi",
         "government": "Telangana",
         "category": "Energy",
-        "description": "Zero electricity bills for households consuming up to 200 units.",
+        "description": "This Telangana Government energy welfare scheme provides free electricity to domestic households to reduce their monthly utility costs. It aims to improve the quality of life for low-income families by ensuring basic energy access.",
         "benefits": "Free electricity up to 200 units monthly",
         "criteria": {
             "state_resident": "Telangana",
@@ -160,7 +165,8 @@
         "title": "BC 1 Lakh Scheme",
         "government": "Telangana",
         "category": "Self-Employment",
-        "description": "Financial aid for BC/OBC communities pursuing caste-based occupations.",
+        "apply_url": "https://tgbcwd.cgg.gov.in/home.do",
+        "description": "Launched by the Telangana Government, this scheme provides self-employment grants to individuals from Backward Classes. It is designed to help traditional artisans and small business owners purchase necessary tools and equipment.",
         "benefits": "₹1,00,000 grant for equipment and tools",
         "criteria": {
             "state_resident": "Telangana",
@@ -190,7 +196,8 @@
         "title": "Yuva Vikasam (Rajeev Youth Development)",
         "government": "Telangana",
         "category": "Education / Skill",
-        "description": "Financial assistance for unemployed youth and skill development.",
+        "apply_url": "https://tgmfc.com/schemeinfo.php?id=6",
+        "description": "This Telangana Government initiative focuses on the skill development and financial support of unemployed youth from various communities. It provides training and assistance to help young citizens secure jobs or start their own ventures.",
         "benefits": "₹5,00,000 assistance + Skill training fund",
         "criteria": {
             "state_resident": "Telangana",
@@ -220,7 +227,8 @@
         "title": "Cheyutha Pension (2025-26)",
         "government": "Telangana",
         "category": "Social Security",
-        "description": "Monthly pension for elderly, widows, and other vulnerable groups.",
+        "apply_url": "https://www.cheyutha.telangana.gov.in/SSPTG/UserInterface/Portal/GeneralSearch.aspx",
+        "description": "A social security initiative by the Telangana Government that offers monthly pensions to vulnerable groups like the elderly and widows. It provides a steady source of income to ensure dignity and basic sustenance for senior citizens.",
         "benefits": "Monthly pension of ₹4,000",
         "criteria": {
             "state_resident": "Telangana",
@@ -242,7 +250,8 @@
         "title": "PM-KISAN",
         "government": "Central",
         "category": "Agriculture",
-        "description": "Income support to all landholding farmer families across the country.",
+        "apply_url": "https://pmkisan.gov.in/",
+        "description": "This Central Government scheme provides direct income support to landholding farmer families across India. It helps farmers manage agricultural expenses by providing regular financial transfers throughout the year.",
         "benefits": "₹6,000 per year in three installments",
         "criteria": {
             "occupation": "Farmer",
@@ -265,7 +274,8 @@
         "title": "Ayushman Bharat (PM-JAY) 2026",
         "government": "Central",
         "category": "Health",
-        "description": "Free health insurance specialized for seniors in 2026.",
+        "apply_url": "https://pmjay.gov.in/",
+        "description": "A comprehensive health insurance mission by the Central Government that provides cashless medical coverage for secondary and tertiary care. It ensures that poor and vulnerable families can access hospital services without financial hardship.",
         "benefits": "₹5,00,000 family cover + Top-up for 70+ seniors",
         "criteria": {
             "senior_citizen_above_70": true,
@@ -286,7 +296,8 @@
         "title": "PM Surya Ghar Muft Bijli Yojana",
         "government": "Central",
         "category": "Energy",
-        "description": "Rooftop solarization for households to provide free electricity.",
+        "apply_url": "https://pmsuryaghar.gov.in/",
+        "description": "This Central Government initiative promotes the use of rooftop solar panels to provide free electricity to Indian households. It aims to reduce carbon footprints while helping citizens generate their own clean energy.",
         "benefits": "Up to 300 units of free electricity per month",
         "criteria": {
             "own_house": true,
@@ -307,7 +318,8 @@
         "title": "PM Dhan-Dhaanya Krishi Yojana (PM-DDKY)",
         "government": "Central",
         "category": "Agriculture",
-        "description": "Yield support mission for 100 targeted districts.",
+        "apply_url": "https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=154909&ModuleId=3&reg=3&lang=2",
+        "description": "A targeted agricultural mission by the Central Government to improve crop yields in specific districts. It focuses on modernizing farming techniques and providing infrastructure support for better post-harvest management.",
         "benefits": "Enhanced yield support, cold storage, ₹5L KCC limit",
         "criteria": {
             "is_in_targeted_district": true,
@@ -328,7 +340,8 @@
         "title": "PM Internship Scheme (Phase 2)",
         "government": "Central",
         "category": "Employment",
-        "description": "Structured internship opportunities for youth.",
+        "apply_url": "https://pminternship.mca.gov.in/",
+        "description": "This Central Government program provides structured internship opportunities in top companies for India's youth. It aims to bridge the gap between education and employment by offering practical industry experience and a stipend.",
         "benefits": "₹5,000 monthly stipend + ₹6,000 one-time grant",
         "criteria": {
             "min_age": 21,
@@ -349,7 +362,8 @@
         "title": "PM Vishwakarma",
         "government": "Central",
         "category": "Skill / Artisans",
-        "description": "End-to-end support for traditional artisans.",
+        "apply_url": "https://pmvishwakarma.gov.in/",
+        "description": "Introduced by the Central Government, this scheme provides holistic support to traditional artisans and craftspersons. It offers skill training, toolkits, and low-interest credit to preserve India's rich cultural heritage and workmanship.",
         "benefits": "Stipend, tools kit, credit support up to ₹3L",
         "criteria": {
             "is_artisan": true,
@@ -369,7 +383,8 @@
         "title": "Rythu Bima",
         "government": "Telangana",
         "category": "Agriculture / Insurance",
-        "description": "Group Life Insurance Scheme for farmers to provide financial security to their families.",
+        "apply_url": "https://rythubharosa.telangana.gov.in/Default_Home.aspx",
+        "description": "This Telangana Government group life insurance scheme provides financial security to the families of deceased farmers. It ensures that the nominee receives a lump sum amount to prevent debt and distress after the loss of a breadwinner.",
         "benefits": "₹5,00,000 life insurance cover (entire premium paid by Govt)",
         "criteria": {
             "state_resident": "Telangana",
@@ -395,7 +410,8 @@
         "title": "Sheep Distribution Scheme",
         "government": "Telangana",
         "category": "Livelihood",
-        "description": "Providing sheep units at a subsidized rate to the traditional shepherd communities.",
+        "apply_url": "https://sheepfed.telangana.gov.in/",
+        "description": "A livelihood support program by the Telangana Government for traditional shepherd communities. It provides subsidized livestock units to help families increase their income through sustainable animal husbandry.",
         "benefits": "75% subsidy on ₹1,75,000 unit cost (20 sheep + 1 ram)",
         "criteria": {
             "state_resident": "Telangana",
@@ -421,7 +437,7 @@
         "title": "Chenetha Lakshmi / Weaver Welfare",
         "government": "Telangana",
         "category": "Welfare / Weavers",
-        "description": "Thrift-cum-savings and welfare scheme for handloom weavers and allied workers.",
+        "description": "This Telangana Government welfare scheme is dedicated to the well-being of handloom weavers and their families. It provides savings support and financial aid to preserve the handloom industry and improve the weavers' livelihoods.",
         "benefits": "Subsidy on looms, health insurance, and monthly financial assistance",
         "criteria": {
             "state_resident": "Telangana",
@@ -444,7 +460,8 @@
         "title": "Fee Reimbursement Scheme (RTF)",
         "government": "Telangana",
         "category": "Education",
-        "description": "Post-Matric scholarship providing tuition fee reimbursement for professional and degree courses.",
+        "apply_url": "https://telanganaepass.cgg.gov.in/",
+        "description": "A major educational initiative by the Telangana Government that covers the tuition fees of students from marginalized communities. It enables meritorious students from poor families to pursue higher education and professional courses.",
         "benefits": "Full tuition fee reimbursement for SC/ST and toppers; categorized for others",
         "criteria": {
             "state_resident": "Telangana",
@@ -475,7 +492,8 @@
         "title": "Stree Nidhi",
         "government": "Telangana",
         "category": "Micro-Finance",
-        "description": "Credit facility for SHG women to support livelihood and emergency needs.",
+        "apply_url": "https://streenidhi.telangana.gov.in/",
+        "description": "This Telangana Government micro-finance program provides easy and low-interest credit to women members of Self-Help Groups (SHGs). It empowers rural and urban women by funding their entrepreneurial activities and household needs.",
         "benefits": "Low-interest loans from ₹5,000 to ₹3,00,000 without collateral",
         "criteria": {
             "state_resident": "Telangana",
@@ -497,7 +515,8 @@
         "title": "Rajiv Aarogyasri (2025-26)",
         "government": "Telangana",
         "category": "Health",
-        "description": "Cashless healthcare scheme covering major surgeries and treatments.",
+        "apply_url": "https://aarogyasri.telangana.gov.in/",
+        "description": "A flagship health insurance scheme of the Telangana Government providing cashless treatment for major ailments and surgeries. It allows BPL families to access quality healthcare in both government and private empanelled hospitals.",
         "benefits": "Free medical treatment up to ₹10,00,000 per family per year",
         "criteria": {
             "state_resident": "Telangana",
@@ -519,7 +538,8 @@
         "title": "Farm Mechanization Scheme",
         "government": "Telangana",
         "category": "Agriculture",
-        "description": "Subsidizing agricultural machinery to reduce labor dependency.",
+        "apply_url": "https://agri.telangana.gov.in/",
+        "description": "This Telangana Government initiative provides subsidies on agricultural machinery like tractors and tools to modernize farming. It aims to reduce manual labor, increase efficiency, and lower the overall cost of cultivation for farmers.",
         "benefits": "50% subsidy for women farmers; 40% for others on tractors/tools",
         "criteria": {
             "state_resident": "Telangana",
@@ -541,7 +561,8 @@
         "title": "Ambedkar / Minority Overseas Vidya Nidhi",
         "government": "Telangana",
         "category": "Education",
-        "description": "Financial assistance for meritorious students to pursue PG/PhD abroad.",
+        "apply_url": "https://telanganaepass.cgg.gov.in/",
+        "description": "A Telangana Government scholarship program for meritorious students from SC, ST, BC, and Minority communities to study abroad. It provides substantial grants to cover tuition fees and travel expenses for higher education in foreign universities.",
         "benefits": "Up to ₹20,00,000 grant + airfare and visa expenses",
         "criteria": {
             "state_resident": "Telangana",
@@ -573,7 +594,8 @@
         "title": "Pradhan Mantri Awas Yojana (PMAY)",
         "government": "Central",
         "category": "Housing",
-        "description": "Affordable housing for all with financial assistance for construction and interest subsidies.",
+        "apply_url": "https://pmay-urban.gov.in/",
+        "description": "A Central Government housing mission that aims to provide affordable 'Housing for All' in both urban and rural India. It offers financial assistance and interest subsidies for the construction and renovation of permanent houses.",
         "benefits": "Financial assistance for house construction and interest subsidy on home loans",
         "criteria": {
             "first_time_home_buyer": true,
@@ -596,7 +618,8 @@
         "title": "Indiramma Atmiya Bharosa",
         "government": "Telangana",
         "category": "Agriculture / Welfare",
-        "description": "Financial assistance of ₹12,000 annually to farmers and landless agricultural laborers.",
+        "apply_url": "https://rythubharosa.telangana.gov.in/",
+        "description": "This Telangana Government scheme provides annual financial assistance to both farmers and landless agricultural laborers. It serves as a safety net to ensure that rural workers have sufficient funds for their basic needs and farming.",
         "benefits": "₹12,000 per year (in two installments of ₹6,000 each)",
         "criteria": {
             "state_resident": "Telangana",
@@ -620,7 +643,8 @@
         "title": "Vaddileni Runalu (Interest-Free Loans)",
         "government": "Telangana",
         "category": "Agriculture / Finance",
-        "description": "Interest-free loans to farmers and SHGs to reduce the burden of debt.",
+        "apply_url": "https://agri.telangana.gov.in/",
+        "description": "A Telangana Government financial support scheme that provides interest-free loans to farmers and women's Self-Help Groups. It aims to lower the cost of borrowing and encourage timely repayment of agricultural and livelihood loans.",
         "benefits": "Interest-free crop loans up to ₹1 Lakh; Interest reimbursement for SHG loans up to ₹5 Lakh",
         "criteria": {
             "state_resident": "Telangana",
@@ -643,7 +667,8 @@
         "title": "Drip & Sprinkler Subsidy (Micro Irrigation)",
         "government": "Telangana",
         "category": "Agriculture",
-        "description": "Subsidizing micro-irrigation systems to improve water efficiency and crop yields.",
+        "apply_url": "https://horticulturedept.telangana.gov.in/horticulturetelangana/newhome.aspx",
+        "description": "This Telangana Government initiative promotes water-efficient farming through subsidized micro-irrigation systems. It helps farmers conserve water, reduce electricity usage, and increase crop productivity in drought-prone areas.",
         "benefits": "100% subsidy for SC/ST; 90% for BC; 80% for Other Caste farmers",
         "criteria": {
             "state_resident": "Telangana",
@@ -667,7 +692,8 @@
         "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
         "government": "Central",
         "category": "Finance / Banking",
-        "description": "National Mission for Financial Inclusion to ensure access to financial services.",
+        "apply_url": "https://pmjdy.gov.in/",
+        "description": "A major financial inclusion program by the Central Government to provide every household with a basic bank account. It facilitates easy access to banking services, insurance, and direct government benefits for the unbanked population.",
         "benefits": "Zero balance account, ₹2L accident insurance, ₹10,000 overdraft facility",
         "criteria": {
             "min_age": 10,
@@ -687,7 +713,8 @@
         "title": "Pradhan Mantri Mudra Yojana (PMMY)",
         "government": "Central",
         "category": "Finance / Business",
-        "description": "Loans up to ₹20 Lakh to non-corporate, non-farm small/micro enterprises.",
+        "apply_url": "https://mudra.org.in/",
+        "description": "This Central Government scheme provides collateral-free loans to small and micro-enterprises to boost entrepreneurship. It funds small-scale businesses in various categories to help them grow and generate employment.",
         "benefits": "Collateral-free loans in Shishu, Kishor, Tarun, and Tarun Plus categories",
         "criteria": {
             "is_entrepreneur": true,
@@ -711,7 +738,8 @@
         "title": "Atal Pension Yojana (APY)",
         "government": "Central",
         "category": "Social Security / Pension",
-        "description": "Pension scheme for citizens in the unorganized sector.",
+        "apply_url": "https://www.npscra.proteantech.in/scheme-details.php",
+        "description": "A Central Government social security scheme designed to provide a guaranteed monthly pension to workers in the unorganized sector. It encourages citizens to save for their retirement and ensures financial independence in old age.",
         "benefits": "Guaranteed monthly pension from ₹1,000 to ₹5,000 after 60 years",
         "criteria": {
             "min_age": 18,
@@ -733,7 +761,8 @@
         "title": "Pradhan Mantri Shram Yogi Maandhan (PM-SYM)",
         "government": "Central",
         "category": "Social Security / Pension",
-        "description": "Pension scheme for unorganized workers like street vendors, rickshaw pullers, etc.",
+        "apply_url": "https://maandhan.in/",
+        "description": "A voluntary pension scheme by the Central Government for unorganized workers like street vendors and rickshaw pullers. It provides a steady monthly income during old age to workers with low monthly earnings.",
         "benefits": "Assured monthly pension of ₹3,000 after 60 years",
         "criteria": {
             "min_age": 18,
@@ -757,7 +786,8 @@
         "title": "Pradhan Mantri Ujjwala Yojana (PMUY)",
         "government": "Central",
         "category": "Welfare / Clean Energy",
-        "description": "Providing clean cooking fuel (LPG) to women from low-income households.",
+        "apply_url": "https://www.pmuy.gov.in/",
+        "description": "This Central Government welfare scheme provides free LPG connections to women from BPL households to promote clean cooking. It aims to improve women's health and reduce the use of polluting fuels in rural kitchens.",
         "benefits": "Deposit-free LPG connection + First refill and hotplate free",
         "criteria": {
             "min_age": 18,
@@ -780,7 +810,8 @@
         "title": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
         "government": "Central",
         "category": "Welfare / Maternal Health",
-        "description": "Maternity benefit scheme for pregnant and lactating mothers.",
+        "apply_url": "https://pmmvy.wcd.gov.in/",
+        "description": "A maternity benefit program by the Central Government that provides financial assistance to pregnant and lactating mothers. It helps compensate for wage loss and ensures proper nutrition during and after pregnancy.",
         "benefits": "₹5,000 for 1st child; ₹6,000 for 2nd child (if girl child)",
         "criteria": {
             "min_age": 19,
@@ -803,7 +834,8 @@
         "title": "Sukanya Samriddhi Yojana (SSY)",
         "government": "Central",
         "category": "Finance / Savings",
-        "description": "Small deposit scheme exclusively for the girl child to meet education & marriage expenses.",
+        "apply_url": "https://www.nsiindia.gov.in/(S(na0f5t3tqnzv4qvt4im5ox55))/InternalPage.aspx?Id_Pk=89",
+        "description": "A Central Government savings scheme dedicated to the financial security and education of the girl child. It offers high interest rates and tax benefits to help parents build a corpus for their daughter's future.",
         "benefits": "High interest rate (8.2% currently) + Triple Tax Benefit (EEE)",
         "criteria": {
             "child_age_limit": 10,
@@ -825,7 +857,8 @@
         "title": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
         "government": "Central",
         "category": "Agriculture / Insurance",
-        "description": "Crop insurance scheme to provide financial support to farmers in case of crop failure.",
+        "apply_url": "https://pmfby.gov.in/",
+        "description": "A world-standard crop insurance scheme by the Central Government that protects farmers against yield losses due to natural disasters. It provides affordable insurance coverage to ensure financial stability for the farming community.",
         "benefits": "Insurance coverage at lower premiums (1.5% - 5%) against natural calamities",
         "criteria": {
             "is_farmer": true,
@@ -847,7 +880,8 @@
         "title": "Soil Health Card Scheme",
         "government": "Central",
         "category": "Agriculture",
-        "description": "Providing soil health cards to farmers once every 2 years to improve soil productivity.",
+        "apply_url": "https://soilhealth.dac.gov.in/",
+        "description": "This Central Government program provides farmers with detailed reports on the nutrient status of their soil every two years. It helps farmers use the right fertilizers and improve land productivity through integrated nutrient management.",
         "benefits": "Free soil testing and recommendations for integrated nutrient management",
         "criteria": {
             "is_farmer": true,
@@ -866,7 +900,8 @@
         "title": "Kisan Credit Card (KCC)",
         "government": "Central",
         "category": "Agriculture / Finance",
-        "description": "Timely and adequate credit to farmers for their agricultural needs.",
+        "apply_url": "https://pmkisan.gov.in/",
+        "description": "A Central Government credit scheme that provides farmers with timely access to adequate and flexible bank loans. It covers the costs of cultivation, post-harvest expenses, and maintenance of farm assets.",
         "benefits": "Loans up to ₹3 Lakh at effectively 4% interest (with timely repayment)",
         "criteria": {
             "is_farmer": true,
@@ -890,7 +925,8 @@
         "title": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
         "government": "Central",
         "category": "Education / Skill",
-        "description": "Skill certification scheme to enable youth to take up industry-relevant skill training.",
+        "apply_url": "https://www.msde.gov.in/offerings/schemes-and-services/details/pradhan-mantri-kaushal-vikas-yojana-4-0-pmkvy-4-0-2021-ITO3ATMtQWa",
+        "description": "This Central Government skill certification scheme aims to enable Indian youth to take up industry-relevant skill training. It provides placement support and recognized certificates to improve the employability of the workforce.",
         "benefits": "Placement support, certification, and future-ready skill training (AI, Drones, 5G)",
         "criteria": {
             "min_age": 15,
@@ -913,7 +949,8 @@
         "title": "National Means-cum-Merit Scholarship (NMMSS)",
         "government": "Central",
         "category": "Education",
-        "description": "Scholarship for meritorious students of economically weaker sections to reduce dropout.",
+        "apply_url": "https://scholarships.gov.in/",
+        "description": "A Central Government scholarship for meritorious students from economically weaker sections in government schools. It provides financial aid from class 9 to 12 to reduce dropout rates and encourage further studies.",
         "benefits": "₹12,000 per annum for students from Class 9 to Class 12",
         "criteria": {
             "max_family_income": 350000,
@@ -937,7 +974,8 @@
         "title": "PM eVIDYA",
         "government": "Central",
         "category": "Education",
-        "description": "Unified platform for all digital/online/on-air education to enable multi-mode access.",
+        "apply_url": "https://pmevidya.education.gov.in/",
+        "description": "A digital education initiative by the Central Government that provides multi-mode access to online and on-air educational content. It ensures learning continuity through TV channels, radio, and online platforms for students and teachers.",
         "benefits": "Free access to e-content (DIKSHA), 200 Educational TV channels, and Podcasts",
         "criteria": {
             "is_student": true,
@@ -956,7 +994,8 @@
         "title": "Stand Up India Scheme",
         "government": "Central",
         "category": "Finance / Entrepreneurship",
-        "description": "Facilitating bank loans between ₹10 Lakh and ₹1 Crore to SC/ST or Women entrepreneurs.",
+        "apply_url": "https://www.standupmitra.in/",
+        "description": "This Central Government program facilitates bank loans for setting up new enterprises for SC, ST, and Women entrepreneurs. It focuses on promoting entrepreneurship and job creation among underrepresented sections of society.",
         "benefits": "Loan for greenfield enterprises; covers up to 75% of project cost; repayment up to 7 years",
         "criteria": {
             "min_age": 18,
@@ -983,7 +1022,8 @@
         "title": "Deendayal Antyodaya Yojana - NRLM",
         "government": "Central",
         "category": "Welfare / Livelihood",
-        "description": "Promoting sustainable livelihoods for the rural poor through Self-Help Groups (SHGs).",
+        "apply_url": "https://nrlm.gov.in/",
+        "description": "A Central Government mission to promote sustainable livelihoods for the rural poor through women's Self-Help Groups (SHGs). It provides financial and technical support to help rural families move above the poverty line.",
         "benefits": "Revolving Fund of ₹20,000-₹30,000; collateral-free loans up to ₹20 Lakh for SHGs",
         "criteria": {
             "is_rural_poor_woman": true,
@@ -1005,7 +1045,8 @@
         "title": "Deendayal Antyodaya Yojana - NULM",
         "government": "Central",
         "category": "Welfare / Livelihood",
-        "description": "Reducing poverty and vulnerability of urban poor households.",
+        "apply_url": "https://nulm.gov.in/",
+        "description": "This Central Government scheme focuses on reducing poverty and vulnerability for urban poor households across India. It provides skill training, self-employment support, and basic services to urban marginalized communities.",
         "benefits": "Skill training; subsidy on interest for self-employment loans; support for street vendors",
         "criteria": {
             "is_urban_poor": true,
@@ -1027,7 +1068,8 @@
         "title": "Pradhan Mantri Gram Sadak Yojana (PMGSY)",
         "government": "Central",
         "category": "Infrastructure / Community",
-        "description": "Nationwide program to provide all-weather road connectivity to unconnected rural habitations.",
+        "apply_url": "https://pmgsy.nic.in/",
+        "description": "A Central Government infrastructure project to provide all-weather road connectivity to unconnected rural habitations. It facilitates better access to markets, education, and healthcare for remote villages.",
         "benefits": "Year-round access to markets, schools, and hospitals for the entire village",
         "criteria": {
             "village_population_plain": 500,
@@ -1047,7 +1089,8 @@
         "title": "Pradhan Mantri Garib Kalyan Anna Yojana (PMGKAY)",
         "government": "Central",
         "category": "Welfare / Food Security",
-        "description": "Free food grain distribution to the poor, extended until December 2028.",
+        "apply_url": "https://dfpd.gov.in/pradhan-mantri-garib-kalyan-anna-yojana/en",
+        "description": "A food security mission by the Central Government that provides free food grains to the poorest citizens through the PDS system. It aims to eliminate hunger and ensure basic nutrition during times of economic hardship.",
         "benefits": "5 kg of free food grain per person per month (for PHH) or 35 kg per family (for AAY)",
         "criteria": {
             "has_ration_card": true,
@@ -1069,7 +1112,8 @@
         "title": "National Social Assistance Programme (NSAP)",
         "government": "Central",
         "category": "Social Security / Pension",
-        "description": "Financial assistance to the elderly, widows, and persons with disabilities.",
+        "apply_url": "https://nsap.dord.gov.in/",
+        "description": "This Central Government initiative provides financial assistance to the elderly, widows, and persons with disabilities from BPL families. It ensures a minimum level of social protection for the most vulnerable citizens.",
         "benefits": "Monthly pension (₹200 - ₹500 central share + state top-up); ₹20,000 lump sum for family bereavement",
         "criteria": {
             "bpl_status": true,
@@ -1094,7 +1138,8 @@
         "title": "PM SVANidhi",
         "government": "Central",
         "category": "Finance / Business",
-        "description": "Micro-credit facility for street vendors to restart their livelihoods.",
+        "apply_url": "https://pmsvanidhi.mohua.gov.in/",
+        "description": "A Central Government micro-credit facility designed to help street vendors restart their businesses with affordable working capital loans. It promotes digital transactions and credit discipline among small-scale urban vendors.",
         "benefits": "Collateral-free working capital loan up to ₹80,000 (across 3 tranches); 7% interest subsidy",
         "criteria": {
             "is_street_vendor": true,
@@ -1114,7 +1159,8 @@
         "title": "Digital India (CSC & PM-WANI)",
         "government": "Central",
         "category": "Infrastructure / Digital",
-        "description": "Transformation of India into a digitally empowered society through public access points.",
+        "apply_url": "https://digitalindia.gov.in/",
+        "description": "A flagship mission by the Central Government to transform the country into a digitally empowered society and knowledge economy. It provides public internet access points and digital services to bridge the urban-rural divide.",
         "benefits": "Access to 400+ G2C/B2C services via CSC; Affordable high-speed Wi-Fi at PDOs",
         "criteria": {
             "is_indian_citizen": true,
@@ -1132,7 +1178,8 @@
         "title": "Skill India Mission (DDU-GKY / PMKK)",
         "government": "Central",
         "category": "Education / Skill",
-        "description": "Empowering youth with industry-relevant skills for better livelihoods.",
+        "apply_url": "https://www.skillindia.gov.in/",
+        "description": "An umbrella initiative by the Central Government to empower Indian youth with industry-relevant skills and vocational training. It aims to build a global-standard workforce and improve the livelihoods of millions of citizens.",
         "benefits": "Placement-linked training; Free vocational courses; Industry-recognized certificates",
         "criteria": {
             "min_age": 15,
@@ -1154,7 +1201,8 @@
         "title": "National Apprenticeship Promotion Scheme (NAPS)",
         "government": "Central",
         "category": "Education / Skill",
-        "description": "Promoting apprenticeship training by sharing the cost of stipend with employers.",
+        "apply_url": "https://www.apprenticeshipindia.gov.in/",
+        "description": "This Central Government program encourages employers to train apprentices by sharing a portion of the stipend cost. It provides youth with hands-on training and helps industries build a skilled talent pool.",
         "benefits": "Government provides 25% of stipend (max ₹1,500/month) directly to apprentices",
         "criteria": {
             "min_age": 14,
@@ -1176,7 +1224,8 @@
         "title": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
         "government": "Central",
         "category": "Social Security / Insurance",
-        "description": "One-year life insurance scheme, renewable from year to year.",
+        "apply_url": "https://jansuraksha.gov.in/",
+        "description": "A low-cost life insurance scheme by the Central Government that offers death coverage to Indian citizens. It provides a financial safety net for families in case of the sudden loss of a breadwinner.",
         "benefits": "Life cover of ₹2 Lakh on death due to any reason for a premium of ₹436/year",
         "criteria": {
             "min_age": 18,
@@ -1196,7 +1245,8 @@
         "title": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
         "government": "Central",
         "category": "Social Security / Insurance",
-        "description": "Accident insurance scheme offering death and disability cover.",
+        "apply_url": "https://jansuraksha.gov.in/",
+        "description": "An affordable Central Government accident insurance scheme that provides death and disability cover. It ensures that citizens from all economic backgrounds have access to basic personal accident insurance.",
         "benefits": "₹2 Lakh for death/total disability; ₹1 Lakh for partial disability; Premium ₹20/year",
         "criteria": {
             "min_age": 18,
@@ -1216,7 +1266,8 @@
         "title": "One Nation One Ration Card (ONORC)",
         "government": "Central / State",
         "category": "Welfare / Migrants",
-        "description": "Technology-driven scheme for nationwide portability of ration cards.",
+        "apply_url": "https://nfsa.gov.in/",
+        "description": "A technology-driven Central Government initiative for the nationwide portability of public distribution benefits. It allows migrant workers and their families to access subsidized food grains from any PDS outlet in India.",
         "benefits": "Migrants can buy subsidized food anywhere in India using their home state's ration card",
         "criteria": {
             "has_pds_ration_card": true,
@@ -1236,7 +1287,8 @@
         "title": "NEP 2020 Initiatives (NIPUN Bharat / PM-SHRI)",
         "government": "Central",
         "category": "Education",
-        "description": "Reforming school education with focus on foundational literacy and exemplar schools.",
+        "apply_url": "https://education.gov.in/",
+        "description": "These Central Government programs focus on reforming India's school education system with a focus on foundational literacy. They aim to improve school infrastructure and introduce modern pedagogy for holistic student development.",
         "benefits": "Focus on FLN for Grades 1-3; Upgraded school infrastructure and digital pedagogy",
         "criteria": {
             "is_student": true,
@@ -1256,7 +1308,8 @@
         "title": "PM CARES for Children",
         "government": "Central",
         "category": "Welfare / Social Security",
-        "description": "Support to children who lost parents/guardians to the COVID-19 pandemic.",
+        "apply_url": "https://pmcaresforchildren.in/",
+        "description": "This Central Government scheme provides comprehensive support to children who lost their parents or guardians to the COVID-19 pandemic. It ensures their education, healthcare, and financial security until they reach adulthood.",
         "benefits": "₹10 Lakh corpus at age 18; Monthly stipend; ₹5 Lakh healthcare insurance",
         "criteria": {
             "lost_parents_covid": true,
@@ -1277,7 +1330,8 @@
         "title": "PM Gati Shakti",
         "government": "Central",
         "category": "Infrastructure / Logistics",
-        "description": "National Master Plan for Multi-modal Connectivity to reduce logistics costs and improve infrastructure coordination.",
+        "apply_url": "https://www.nsws.gov.in/portal/scheme/pmgatishakti",
+        "description": "A transformative Central Government master plan for multi-modal infrastructure and logistics coordination. It aims to reduce transport costs and improve the speed of project execution through integrated digital planning.",
         "benefits": "Reduced transport time; integrated planning for businesses; improved last-mile connectivity",
         "criteria": {
             "business_owner": true,
@@ -1296,7 +1350,8 @@
         "title": "e-Shram Portal",
         "government": "Central",
         "category": "Welfare / Social Security",
-        "description": "National database of unorganized workers to facilitate social security benefits.",
+        "apply_url": "https://eshram.gov.in/",
+        "description": "A Central Government initiative to create a national database of unorganized workers like construction laborers and street vendors. It facilitates the delivery of social security benefits and accidental insurance directly to the workers.",
         "benefits": "Accidental insurance (₹2 Lakh death/disability); portal acts as a single window for all welfare schemes",
         "criteria": {
             "unorganized_worker": true,
@@ -1319,7 +1374,8 @@
         "title": "PM KUSUM Yojana",
         "government": "Central",
         "category": "Agriculture / Energy",
-        "description": "Solarization of agricultural pumps and setting up solar power plants on barren lands.",
+        "apply_url": "https://pmkusum.mnre.gov.in/",
+        "description": "This Central Government scheme enables farmers to install solar pumps and set up solar power plants on their barren lands. It helps farmers secure their energy needs while providing an additional source of income from solar power.",
         "benefits": "60% subsidy (30% Central + 30% State) on solar pumps; income from selling surplus power (up to ₹25k-65k per acre)",
         "criteria": {
             "is_farmer": true,
@@ -1342,7 +1398,8 @@
         "title": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
         "government": "Central",
         "category": "Agriculture / Fisheries",
-        "description": "Flagship scheme for focused and sustainable development of the fisheries sector.",
+        "apply_url": "https://pmmsy.dof.gov.in/",
+        "description": "A flagship Central Government scheme for the sustainable and focused development of the fisheries and aquaculture sector across India. It provides financial aid for infrastructure and insurance to improve the livelihoods of fishermen.",
         "benefits": "Financial aid for building hatcheries/units; insurance for fishermen; deep-sea fishing vessel support",
         "criteria": {
             "is_fisherman": true,
@@ -1363,7 +1420,8 @@
         "title": "Production Linked Incentive (PLI) Scheme",
         "government": "Central",
         "category": "Industry / Manufacturing",
-        "description": "Financial incentives to companies for incremental sales from products manufactured in India.",
+        "apply_url": "https://investindia.gov.in/",
+        "description": "This Central Government program provides financial incentives to manufacturing companies to boost domestic production in India. It aims to make Indian industries globally competitive and create large-scale employment opportunities.",
         "benefits": "4% to 6% cash incentive on incremental sales; support across 14 strategic sectors",
         "criteria": {
             "is_manufacturing_entity": true,
@@ -1384,7 +1442,8 @@
         "title": "National Scholarship Portal (NSP)",
         "government": "Central",
         "category": "Education",
-        "description": "One-stop solution for multiple scholarship schemes of Central and State governments.",
+        "apply_url": "https://scholarships.gov.in/",
+        "description": "A centralized Central Government platform that provides a single-window solution for various student scholarship schemes. It streamlines the application and disbursement process to ensure that benefits reach deserving students.",
         "benefits": "Direct Benefit Transfer (DBT) of scholarship amounts; streamlined application for 100+ schemes",
         "criteria": {
             "is_student": true,
@@ -1408,7 +1467,8 @@
         "title": "PM Formalisation of Micro Food Processing Enterprises (PMFME)",
         "government": "Central",
         "category": "Welfare / Food Processing",
-        "description": "Financial, technical and business support for the upgradation of micro food processing enterprises.",
+        "apply_url": "https://pmfme.mofpi.gov.in/",
+        "description": "This Central Government initiative provides technical and financial support for the upgradation of micro-food processing enterprises. It helps small-scale food businesses improve their quality, branding, and market access.",
         "benefits": "35% credit-linked capital subsidy (max ₹10 Lakh); training and seed capital support for SHGs",
         "criteria": {
             "is_micro_food_enterprise": true,
@@ -1431,7 +1491,8 @@
         "title": "National Career Service (NCS)",
         "government": "Central",
         "category": "Welfare / Employment",
-        "description": "Unified portal providing a wide range of employment and career-related services.",
+        "apply_url": "https://www.ncs.gov.in/",
+        "description": "A unified platform by the Central Government providing a range of employment services like job matching and career counseling. It connects job seekers with employers and providers of training and career guidance.",
         "benefits": "Job matching; Career counseling; AI-powered resume building; Access to skill-gap analysis",
         "criteria": {
             "job_seeker": true,
@@ -1451,7 +1512,8 @@
         "title": "Jal Jeevan Mission (Har Ghar Jal)",
         "government": "Central",
         "category": "Infrastructure / Welfare",
-        "description": "Ensuring functional household tap connection to every rural household.",
+        "apply_url": "https://jaljeevanmission.gov.in/",
+        "description": "A major Central Government welfare project aiming to provide functional household tap connections to every rural home in India. It focuses on ensuring safe and adequate drinking water to improve public health and hygiene.",
         "benefits": "Safe and adequate drinking water (55 lpcd) at home; improved health and time savings",
         "criteria": {
             "rural_household": true,
@@ -1470,7 +1532,8 @@
         "title": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP)",
         "government": "Central",
         "category": "Welfare / Health",
-        "description": "Making quality medicines available at affordable prices for all through special outlets.",
+        "apply_url": "http://janaushadhi.gov.in/",
+        "description": "This Central Government initiative makes high-quality generic medicines available at affordable prices through special retail outlets. It significantly reduces the healthcare costs for poor and middle-class families.",
         "benefits": "Branded quality generic medicines at 50% to 90% cheaper price than market",
         "criteria": {
             "is_indian_citizen": true
@@ -1488,7 +1551,8 @@
         "title": "National Programme for Financial Inclusion (NPFI)",
         "government": "Central",
         "category": "Finance / Digital",
-        "description": "Universal access to financial services including banking, credit, and digital payments.",
+        "apply_url": "https://financialservices.gov.in/",
+        "description": "A Central Government mission to ensure that marginalized sections of society have access to basic financial services like banking and credit. It promotes economic stability and empowers citizens through digital payment literacy.",
         "benefits": "Access to savings accounts; low-cost insurance; credit discipline; digital payment literacy",
         "criteria": {
             "is_unbanked": true,
@@ -1508,7 +1572,8 @@
         "title": "National SC-ST Hub Scheme",
         "government": "Central",
         "category": "Finance / Industry",
-        "description": "Comprehensive support system for SC/ST-owned MSMEs to help them compete in public procurement.",
+        "apply_url": "https://www.scsthub.in/",
+        "description": "This Central Government initiative provides comprehensive support to entrepreneurs from SC and ST communities to compete in public procurement. It offers technical assistance and financial subsidies to boost the growth of SC-ST owned MSMEs.",
         "benefits": "25% capital subsidy (max ₹25 Lakh) on technology; reimbursements for various fees; market access support",
         "criteria": {
             "is_msme_owner": true,
@@ -1534,7 +1599,8 @@
         "title": "National Creche Scheme (Palna)",
         "government": "Central",
         "category": "Welfare / Women",
-        "description": "Providing daycare facilities for children of working mothers to ensure holistic development.",
+        "apply_url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1606292&reg=3&lang=2",
+        "description": "A Central Government welfare program providing daycare facilities for the children of working mothers in India. It ensures a safe environment and proper nutrition for children to support women's participation in the workforce.",
         "benefits": "Daycare from 6 months to 6 years; supplementary nutrition; health check-ups; safe environment",
         "criteria": {
             "is_working_mother": true,
@@ -1555,7 +1621,8 @@
         "title": "Sakhi Niwas (Working Women Hostel)",
         "government": "Central",
         "category": "Welfare / Women",
-        "description": "Safe and affordable accommodation for working women and students in urban/rural areas.",
+        "apply_url": "https://missionshakti.wcd.gov.in/statisticsNiwas",
+        "description": "This Central Government initiative provides safe and affordable accommodation for working women and students in urban areas. It ensures secure housing and basic amenities to help women pursue their careers away from home.",
         "benefits": "Affordable housing; mess facilities; security; medical aid; stay for children (boys up to 12, girls up to 18)",
         "criteria": {
             "is_working_woman_or_student": true,
@@ -1577,7 +1644,8 @@
         "title": "National Family Benefit Scheme (NFBS)",
         "government": "Central",
         "category": "Social Security / Welfare",
-        "description": "One-time lump sum assistance to BPL families on the death of the primary breadwinner.",
+        "apply_url": "https://web.umang.gov.in/landing/scheme/detail/national-family-benefit-scheme_nfbs.html",
+        "description": "A Central Government social security program that provides one-time financial assistance to BPL families on the death of a primary breadwinner. It serves as a crucial safety net to prevent families from falling into extreme poverty.",
         "benefits": "One-time payment of ₹20,000 (Central share, may vary by state)",
         "criteria": {
             "bpl_status": true,

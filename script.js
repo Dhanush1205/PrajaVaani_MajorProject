@@ -148,30 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    async function handleGoogleCallback(response) {
-        try {
-            const res = await fetch(`${API_BASE_URL}/api/google-login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ token: response.credential })
-            });
-            const data = await res.json();
 
-            if (res.ok && data.success) {
-                STATE.currentUser = data.user;
-                loadDashboard();
-                showView('dashboard');
-            } else {
-                showToast(data.error || 'Google login failed');
-            }
-        } catch (error) {
-            console.error('Google login error:', error);
-            showToast('Error during Google login');
-        }
-    }
-
-    // Export globally for Google Sign-In SDK
-    window.handleGoogleCallback = handleGoogleCallback;
 
     function handleLogout() {
         STATE.currentUser = null;
@@ -254,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title = schemeData ? schemeData.title : 'Scheme Details';
                 content = renderSchemeDetails(schemeData);
             } else {
-                title = 'Government Schemes';
+                title = 'Eligibility Checker';
                 content = renderSchemesList();
             }
         } else if (tabName === 'ai-assistant') {
@@ -267,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title = 'Fee Reimbursement Estimator';
             content = renderFeeReimbursementTab();
         } else if (tabName === 'subsidy-calculator') {
-            title = 'Farmer Subsidy & Support Calculator';
+            title = 'Farmer Subsidy Calculator';
             content = window.renderSubsidyCalculatorTab ? window.renderSubsidyCalculatorTab() : renderPlaceholderTab('💰', 'Subsidy Calculator', 'Loading calculator module...');
         } else if (tabName === 'nearest-help') {
             title = 'Nearest Help Centre';
@@ -418,17 +395,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <p class="overview-feature-desc">
                         An AI-powered voice assistant that supports Telugu and English. Users can ask questions through voice or text and get scheme information instantly.
-                    </p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="overview-feature-card">
-                    <div class="overview-feature-header">
-                        <div class="overview-feature-icon">⚖️</div>
-                        <h3 class="overview-feature-title">Scheme Comparator</h3>
-                    </div>
-                    <p class="overview-feature-desc">
-                        Allows users to compare multiple government schemes based on a selected category (e.g., agriculture, education, women welfare). Displays differences clearly to help choose the best option.
                     </p>
                 </div>
                 
@@ -834,9 +800,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </p>
                             </div>
 
-                            <button style="width: 100%; padding: 1rem; margin-top: 1rem; background: ${isEligible ? '#22863a' : '#da3633'}; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onMouseOver="this.style.transform='scale(1.02)'" onMouseOut="this.style.transform='scale(1)'" onclick="alert('Proceeding to Application Portal... (Coming Soon)')">
+                            <button style="width: 100%; padding: 1rem; margin-top: 1rem; background: ${isEligible ? '#22863a' : '#da3633'}; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onMouseOver="this.style.transform='scale(1.02)'" onMouseOut="this.style.transform='scale(1)'" onclick="${scheme.apply_url ? `window.open('${scheme.apply_url}', '_blank')` : "alert('Official Application Portal for this scheme is coming soon! Please check back later.')"}">
                                 ${isEligible ? '📝 Apply Now' : '📋 Learn More'}
                             </button>
+
                         </div>
 
                         <div style="background: #f0f8ff; border: 2px solid #4a90e2; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
@@ -1381,15 +1348,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 wrap.className = 'message ai';
 
                 const audioHtml = audioUrl ? `
-                    <button class="speaker-btn" data-url="${audioUrl}" title="Play audio response">
-                        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728
-                                   M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707
-                                   C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                        </svg>
-                        🔊 Listen
-                    </button>` : '';
+                    <div class="voice-controls">
+                        <button class="voice-btn play-btn" title="Play audio response">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <button class="voice-btn pause-btn hidden" title="Pause audio">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                        <button class="voice-btn stop-btn hidden" title="Stop audio">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg>
+                        </button>
+                    </div>` : '';
 
                 wrap.innerHTML = `
                     <div class="msg-avatar">🤖</div>
@@ -1405,15 +1374,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrollToBottom();
 
                 if (audioUrl) {
-                    const btn = wrap.querySelector('.speaker-btn');
+                    const playBtn = wrap.querySelector('.play-btn');
+                    const pauseBtn = wrap.querySelector('.pause-btn');
+                    const stopBtn = wrap.querySelector('.stop-btn');
                     const aud = new Audio(audioUrl);
-                    btn.addEventListener('click', () => {
-                        btn.textContent = '⏸ Playing…';
-                        aud.currentTime = 0;
+
+                    const updateUI = (state) => {
+                        if (state === 'playing') {
+                            playBtn.classList.add('hidden');
+                            pauseBtn.classList.remove('hidden');
+                            stopBtn.classList.remove('hidden');
+                        } else if (state === 'paused') {
+                            playBtn.classList.remove('hidden');
+                            pauseBtn.classList.add('hidden');
+                            stopBtn.classList.remove('hidden');
+                        } else {
+                            // Stopped / Ended
+                            playBtn.classList.remove('hidden');
+                            pauseBtn.classList.add('hidden');
+                            stopBtn.classList.add('hidden');
+                        }
+                    };
+
+
+                    playBtn.addEventListener('click', () => {
                         aud.play().catch(() => { });
-                        aud.onended = () => { btn.innerHTML = `<svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg> 🔊 Listen`; };
+                        updateUI('playing');
                     });
-                    aud.play().catch(() => { });
+
+                    pauseBtn.addEventListener('click', () => {
+                        aud.pause();
+                        updateUI('paused');
+                    });
+
+                    stopBtn.addEventListener('click', () => {
+                        aud.pause();
+                        aud.currentTime = 0;
+                        updateUI('stopped');
+                    });
+
+                    aud.onended = () => updateUI('stopped');
+                    
+                    // Auto-play
+                    aud.play().then(() => updateUI('playing')).catch(() => { });
                 }
             }
 
@@ -1436,10 +1439,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             function escHtml(text) {
+                if (!text) return '';
                 const div = document.createElement('div');
                 div.textContent = text;
-                return div.innerHTML;
+                return div.innerHTML.replace(/\n/g, '<br>');
             }
+
         }
 
 
@@ -1725,13 +1730,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     padding-left: 1.5rem;
                     color: #b0bec5;
                 }
-                .disclaimer {
-                    font-size: 0.85rem;
-                    color: #b0bec5;
-                    text-align: center;
-                    margin-top: 2rem;
-                    font-style: italic;
-                }
+
             </style>
             
             <div class="fake-card">
@@ -1757,7 +1756,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 
-                <p class="disclaimer">⚠️ This is an AI-based risk estimation tool. Always verify schemes through official government portals.</p>
+
             </div>
         `;
     }

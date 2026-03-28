@@ -1402,26 +1402,37 @@ textarea::placeholder {
 }
 
 /* Speaker button */
-.speaker-btn {
-    display: inline-flex;
+.voice-controls {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
     align-items: center;
-    gap: 5px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--text-muted);
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 0.73rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
 }
 
-.speaker-btn:hover {
-    background: rgba(41, 121, 255, 0.2);
-    border-color: rgba(41, 121, 255, 0.4);
-    color: var(--text-main);
+.voice-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.8;
 }
+
+.voice-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+
+.voice-btn.hidden { display: none !important; }
+
+
 
 /* Typing Dots */
 .typing-dots {

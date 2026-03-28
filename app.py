@@ -192,8 +192,16 @@ async def text_query(request: Request):
         title_en = scheme.get("title", scheme_id)
         desc_en = scheme.get("description", "No details available.")
         benefits_en = scheme.get("benefits", "")
+        docs_list = scheme.get("documents", [])
+        docs_en = ", ".join(docs_list) if docs_list else "Not specified"
         
-        full_info_en = f"Details for {title_en}: {desc_en} Benefits: {benefits_en}"
+        full_info_en = (
+            f"Scheme Details: {desc_en} "
+            f"Benefits: {benefits_en} "
+            f"Required Documents: {docs_en}."
+        )
+
+
         
         if lang_override == "te":
             # Translate to Telugu

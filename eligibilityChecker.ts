@@ -52,6 +52,7 @@ interface Scheme {
   category: string;
   description: string;
   benefits: string;
+  apply_url?: string;
   status?: string;
   criteria: SchemeCriteria;
   documents: string[];
@@ -63,6 +64,8 @@ interface EligibilityResult {
   title: string;
   government: string;
   category: string;
+  description?: string;
+  apply_url?: string;
   eligible: boolean;
   confidence: number;
   missing_criteria: string[];
@@ -649,6 +652,8 @@ function evaluateScheme(user: UserProfile, scheme: Scheme): EligibilityResult {
     title: scheme.title,
     government: scheme.government,
     category: scheme.category,
+    description: scheme.description,
+    apply_url: scheme.apply_url,
     eligible,
     confidence,
     missing_criteria: eligible ? [] : (validationResult.reason ? [validationResult.reason] : []),
