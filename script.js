@@ -263,6 +263,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (tabName === 'fake-scheme') {
             title = 'Fake Scheme Detector';
             content = renderFakeSchemeTab();
+        } else if (tabName === 'fee-reimbursement') {
+            title = 'Fee Reimbursement Estimator';
+            content = renderFeeReimbursementTab();
+        } else if (tabName === 'subsidy-calculator') {
+            title = 'Subsidy Calculator';
+            content = renderPlaceholderTab('💰', 'Subsidy Calculator', 'Calculate exact financial benefits for scholarship schemes, farmer subsidies, and loan subsidies.');
+        } else if (tabName === 'nearest-help') {
+            title = 'Nearest Help Centre';
+            content = renderPlaceholderTab('📍', 'Nearest Help Centre', 'Instantly locate your nearest MeeSeva centre or department office for physical assistance.');
         }
 
         // Common DOM Update
@@ -276,6 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
             initVoiceAssistant();
         } else if (tabName === 'fake-scheme') {
             initFakeSchemeDetector();
+        } else if (tabName === 'fee-reimbursement') {
+            initFeeReimbursementEstimator();
         }
 
         function renderOverviewTab() {
@@ -449,6 +460,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <p class="overview-feature-desc">
                         Calculates exact financial benefits for scholarship schemes, farmer subsidies, and loan subsidies.
+                    </p>
+                </div>
+                
+                <!-- Feature 7 -->
+                <div class="overview-feature-card">
+                    <div class="overview-feature-header">
+                        <div class="overview-feature-icon">🎓</div>
+                        <h3 class="overview-feature-title">Fee Reimbursement Estimator</h3>
+                    </div>
+                    <p class="overview-feature-desc">
+                        Estimate your Telangana scholarship fee reimbursement based on education level, category, and income. Covers Pre-Matric to Degree/Professional courses.
                     </p>
                 </div>
             </div>
@@ -945,7 +967,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Sending user profile:', userProfile);
 
                     // Make API request
-                    const response = await fetch('/api/check-eligibility', {
+                    const response = await fetch('http://localhost:5000/api/check-eligibility', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1817,6 +1839,507 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.textContent = 'Analyze Message';
             }
         });
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FEE REIMBURSEMENT ESTIMATOR TAB
+       ═══════════════════════════════════════════════════════════════ */
+
+    function renderFeeReimbursementTab() {
+        return `
+        <style>
+            .fre-container { max-width: 800px; margin: 0 auto; }
+            .fre-card {
+                background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%);
+                border: 2px solid #e8f0ff;
+                border-radius: 12px;
+                padding: 2rem;
+            }
+            .fre-section-label {
+                background: #f0f8ff;
+                border-left: 4px solid #4a90e2;
+                border-radius: 8px;
+                padding: 1rem;
+                margin: 1.2rem 0 0.8rem 0;
+            }
+            .fre-section-label p { margin: 0; font-size: 0.9rem; font-weight: 700; color: #1a3a52; }
+            .fre-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+            .fre-label { font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem; }
+            .fre-input, .fre-select {
+                width: 100%; padding: 0.9rem 1rem;
+                border: 2px solid #d4e4f7; border-radius: 8px;
+                font-size: 0.95rem; font-weight: 500; color: #1a3a52;
+                background: #ffffff; transition: all 0.3s ease;
+                font-family: inherit;
+            }
+            .fre-input:focus, .fre-select:focus {
+                border-color: #4a90e2;
+                box-shadow: 0 0 0 3px rgba(74,144,226,0.1);
+                outline: none;
+            }
+            .fre-submit {
+                margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1rem;
+                padding: 1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+                color: white; border: none; border-radius: 8px; cursor: pointer;
+                transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(74,144,226,0.3);
+            }
+            .fre-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(74,144,226,0.4); }
+            .fre-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+            .fre-result-card {
+                margin-top: 2rem; border-radius: 12px; padding: 2rem;
+                border: 2px solid; animation: freFadeIn 0.4s ease;
+            }
+            .fre-result-eligible {
+                background: linear-gradient(135deg, #f5fff7 0%, #e8f9ee 100%);
+                border-color: #22863a;
+            }
+            .fre-result-ineligible {
+                background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+                border-color: #da3633;
+            }
+            .fre-amount {
+                font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;
+                background: linear-gradient(135deg, #4a90e2, #22863a);
+                -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            }
+            .fre-docs { margin-top: 1.5rem; animation: freFadeIn 0.5s ease 0.2s both; }
+            .fre-doc-item {
+                display: flex; align-items: center; gap: 0.8rem; padding: 0.7rem 0;
+                border-bottom: 1px solid #e8f0ff; color: #1a3a52; font-weight: 500;
+            }
+            .fre-explanation li {
+                color: #1a3a52; font-weight: 500; margin: 0.5rem 0; line-height: 1.6;
+            }
+            @keyframes freFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+            .fre-hidden { display: none !important; }
+        </style>
+
+        <div class="fre-container">
+            <div class="fre-card">
+                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem;">
+                    <span style="font-size: 1.8rem;">🎓</span>
+                    <h3 style="margin: 0; color: #1a3a52; font-size: 1.5rem; font-weight: 700;">Fee Reimbursement Estimator</h3>
+                </div>
+                <p style="color: #5a6c7d; font-size: 0.95rem; margin-top: 0.3rem; font-weight: 500;">📍 Telangana Scholarships | Estimate your fee reimbursement or stipend amount</p>
+
+                <form id="fre-form" style="display: grid; gap: 1rem; margin-top: 1.5rem;">
+                    <!-- Education Level -->
+                    <div class="fre-section-label"><p>📚 Education Level</p></div>
+                    <div>
+                        <label class="fre-label">Select Education Level <span style="color:#e74c3c;">*</span></label>
+                        <select id="fre-edu-level" class="fre-select" required>
+                            <option value="">Select Level...</option>
+                            <option value="class-5-8">Class 5–8</option>
+                            <option value="class-9-10">Class 9–10</option>
+                            <option value="intermediate">Intermediate (11–12)</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="degree">Degree / Professional (B.Tech, MBA, etc.)</option>
+                        </select>
+                    </div>
+
+                    <!-- Dynamic Fields Container -->
+                    <div id="fre-dynamic-fields" class="fre-hidden">
+                        <div class="fre-section-label"><p>👤 Your Details</p></div>
+                        <div class="fre-grid" style="margin-top: 0.5rem;">
+                            <div>
+                                <label class="fre-label">Category <span style="color:#e74c3c;">*</span></label>
+                                <select id="fre-category" class="fre-select" required>
+                                    <option value="">Select Category...</option>
+                                    <option value="SC">SC (Scheduled Caste)</option>
+                                    <option value="ST">ST (Scheduled Tribe)</option>
+                                    <option value="BC">BC (Backward Caste)</option>
+                                    <option value="EBC">EBC (Extremely Backward)</option>
+                                    <option value="Minority">Minority</option>
+                                    <option value="Disabled">Disabled</option>
+                                    <option value="General">General</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="fre-label">Annual Income (₹) <span style="color:#e74c3c;">*</span></label>
+                                <input type="number" id="fre-income" class="fre-input" placeholder="e.g., 150000" min="0" required>
+                            </div>
+                        </div>
+
+                        <!-- Gender (Class 5-10 only) -->
+                        <div id="fre-gender-group" class="fre-hidden" style="margin-top: 1rem;">
+                            <div class="fre-grid">
+                                <div>
+                                    <label class="fre-label">Gender <span style="color:#e74c3c;">*</span></label>
+                                    <select id="fre-gender" class="fre-select">
+                                        <option value="">Select Gender...</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="fre-label">School Type</label>
+                                    <select id="fre-school-type" class="fre-select">
+                                        <option value="Govt">Government</option>
+                                        <option value="Aided">Aided</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hosteller (Class 9-10, Intermediate) -->
+                        <div id="fre-hosteller-group" class="fre-hidden" style="margin-top: 1rem;">
+                            <div class="fre-grid">
+                                <div>
+                                    <label class="fre-label">Residential Status</label>
+                                    <select id="fre-hosteller" class="fre-select">
+                                        <option value="day">Day Scholar</option>
+                                        <option value="hosteller">Hosteller</option>
+                                    </select>
+                                </div>
+                                <div id="fre-college-type-wrapper" class="fre-hidden">
+                                    <label class="fre-label">College Type</label>
+                                    <select id="fre-college-type" class="fre-select">
+                                        <option value="Govt">Government</option>
+                                        <option value="Aided">Aided</option>
+                                        <option value="Private">Private</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tuition Fee (Diploma, Degree) -->
+                        <div id="fre-fee-group" class="fre-hidden" style="margin-top: 1rem;">
+                            <div class="fre-grid">
+                                <div>
+                                    <label class="fre-label">Tuition Fee (₹/year) <span style="color:#e74c3c;">*</span></label>
+                                    <input type="number" id="fre-tuition-fee" class="fre-input" placeholder="e.g., 35000" min="0">
+                                </div>
+                                <div id="fre-course-type-wrapper" class="fre-hidden">
+                                    <label class="fre-label">Course Type</label>
+                                    <select id="fre-course-type" class="fre-select">
+                                        <option value="BTech">B.Tech / Engineering</option>
+                                        <option value="MBA">MBA / MCA</option>
+                                        <option value="Degree">Degree (BA/BSc/BCom)</option>
+                                        <option value="Other">Other Professional</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rank (Degree only) -->
+                        <div id="fre-rank-group" class="fre-hidden" style="margin-top: 1rem;">
+                            <div class="fre-grid">
+                                <div>
+                                    <label class="fre-label">EAPCET / ECET Rank</label>
+                                    <input type="number" id="fre-rank" class="fre-input" placeholder="e.g., 5000" min="1">
+                                </div>
+                                <div>
+                                    <label class="fre-label">Area Type</label>
+                                    <select id="fre-area" class="fre-select">
+                                        <option value="Rural">Rural</option>
+                                        <option value="Urban">Urban</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Area Type for non-degree (shown for income limit check) -->
+                        <div id="fre-area-simple-group" class="fre-hidden" style="margin-top: 1rem;">
+                            <div class="fre-grid">
+                                <div>
+                                    <label class="fre-label">Area Type</label>
+                                    <select id="fre-area-simple" class="fre-select">
+                                        <option value="Rural">Rural</option>
+                                        <option value="Urban">Urban</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="fre-submit" id="fre-submit-btn">🎯 Estimate Benefit</button>
+                </form>
+            </div>
+
+            <!-- Result -->
+            <div id="fre-result-container"></div>
+
+            <!-- Documents -->
+            <div id="fre-docs-container"></div>
+        </div>
+        `;
+    }
+
+    function initFeeReimbursementEstimator() {
+        const eduLevel = document.getElementById('fre-edu-level');
+        const dynamicFields = document.getElementById('fre-dynamic-fields');
+        const genderGroup = document.getElementById('fre-gender-group');
+        const hostellerGroup = document.getElementById('fre-hosteller-group');
+        const collegeTypeWrapper = document.getElementById('fre-college-type-wrapper');
+        const feeGroup = document.getElementById('fre-fee-group');
+        const courseTypeWrapper = document.getElementById('fre-course-type-wrapper');
+        const rankGroup = document.getElementById('fre-rank-group');
+        const areaSimpleGroup = document.getElementById('fre-area-simple-group');
+        const form = document.getElementById('fre-form');
+
+        if (!eduLevel || !form) return;
+
+        // Dynamic field visibility
+        eduLevel.addEventListener('change', () => {
+            const level = eduLevel.value;
+            if (!level) {
+                dynamicFields.classList.add('fre-hidden');
+                return;
+            }
+            dynamicFields.classList.remove('fre-hidden');
+
+            // Reset all optional groups
+            [genderGroup, hostellerGroup, collegeTypeWrapper, feeGroup, courseTypeWrapper, rankGroup, areaSimpleGroup].forEach(el => el.classList.add('fre-hidden'));
+
+            if (level === 'class-5-8') {
+                genderGroup.classList.remove('fre-hidden');
+                areaSimpleGroup.classList.remove('fre-hidden');
+            } else if (level === 'class-9-10') {
+                genderGroup.classList.remove('fre-hidden');
+                hostellerGroup.classList.remove('fre-hidden');
+                areaSimpleGroup.classList.remove('fre-hidden');
+            } else if (level === 'intermediate') {
+                hostellerGroup.classList.remove('fre-hidden');
+                collegeTypeWrapper.classList.remove('fre-hidden');
+                areaSimpleGroup.classList.remove('fre-hidden');
+            } else if (level === 'diploma') {
+                feeGroup.classList.remove('fre-hidden');
+                collegeTypeWrapper.classList.remove('fre-hidden');
+                areaSimpleGroup.classList.remove('fre-hidden');
+            } else if (level === 'degree') {
+                feeGroup.classList.remove('fre-hidden');
+                courseTypeWrapper.classList.remove('fre-hidden');
+                rankGroup.classList.remove('fre-hidden');
+            }
+
+            // Clear previous results
+            document.getElementById('fre-result-container').innerHTML = '';
+            document.getElementById('fre-docs-container').innerHTML = '';
+        });
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const level = eduLevel.value;
+            const category = document.getElementById('fre-category').value;
+            const income = parseInt(document.getElementById('fre-income').value) || 0;
+            const gender = document.getElementById('fre-gender').value;
+            const hosteller = document.getElementById('fre-hosteller').value;
+            const tuitionFee = parseInt(document.getElementById('fre-tuition-fee').value) || 0;
+            const rank = parseInt(document.getElementById('fre-rank').value) || 0;
+            const courseType = document.getElementById('fre-course-type').value;
+            const area = (level === 'degree') ? document.getElementById('fre-area').value : document.getElementById('fre-area-simple').value;
+
+            if (!level || !category) {
+                alert('Please select Education Level and Category.');
+                return;
+            }
+            if (!income && income !== 0) {
+                alert('Please enter your Annual Income.');
+                return;
+            }
+
+            // === ELIGIBILITY & ESTIMATION LOGIC ===
+            let eligible = false;
+            let amount = 0;
+            let explanations = [];
+            let amountLabel = '';
+
+            // Check category eligibility
+            const eligibleCategories = ['SC', 'ST', 'BC', 'EBC', 'Minority', 'Disabled'];
+            if (!eligibleCategories.includes(category)) {
+                eligible = false;
+                explanations.push('❌ General category is not eligible for fee reimbursement under Telangana scholarship schemes.');
+                renderResult(eligible, 0, '', category, explanations, level);
+                return;
+            }
+
+            // Income limit check
+            const isSCST = (category === 'SC' || category === 'ST');
+            let incomeLimit;
+            if (isSCST) {
+                incomeLimit = 200000;
+            } else {
+                incomeLimit = (area === 'Rural') ? 150000 : 200000;
+            }
+
+            if (income > incomeLimit) {
+                eligible = false;
+                explanations.push(`❌ Income ₹${income.toLocaleString('en-IN')} exceeds the limit of ₹${incomeLimit.toLocaleString('en-IN')} for ${category} (${area}).`);
+                renderResult(eligible, 0, '', category, explanations, level);
+                return;
+            }
+            explanations.push(`✅ Income ₹${income.toLocaleString('en-IN')} is within the ₹${incomeLimit.toLocaleString('en-IN')} limit for ${category} category.`);
+            eligible = true;
+
+            // Calculate amount based on level
+            if (level === 'class-5-8') {
+                if (gender === 'Female') {
+                    amount = 150 * 10; // 10 months
+                    amountLabel = '₹150/month × 10 months';
+                    explanations.push('✅ Girls receive ₹150/month stipend for Class 5–8.');
+                } else {
+                    amount = 100 * 10;
+                    amountLabel = '₹100/month × 10 months';
+                    explanations.push('✅ Boys receive ₹100/month stipend for Class 5–8.');
+                }
+            } else if (level === 'class-9-10') {
+                if (hosteller === 'hosteller') {
+                    amount = (350 * 10) + 1000;
+                    amountLabel = '₹350/month × 10 months + ₹1,000 books';
+                    explanations.push('✅ Hostellers receive ₹350/month + ₹1,000 book allowance for Class 9–10.');
+                } else {
+                    amount = (150 * 10) + 750;
+                    amountLabel = '₹150/month × 10 months + ₹750 books';
+                    explanations.push('✅ Day scholars receive ₹150/month + ₹750 book allowance for Class 9–10.');
+                }
+            } else if (level === 'intermediate') {
+                const baseAmount = 850;
+                const maintenance = (hosteller === 'hosteller') ? 3000 : 1500;
+                amount = baseAmount + maintenance;
+                amountLabel = `₹${baseAmount} tuition + ₹${maintenance.toLocaleString('en-IN')} maintenance`;
+                explanations.push(`✅ Basic tuition reimbursement of ₹${baseAmount}/year.`);
+                explanations.push(`✅ ${hosteller === 'hosteller' ? 'Hosteller' : 'Day scholar'} maintenance allowance: ₹${maintenance.toLocaleString('en-IN')}.`);
+            } else if (level === 'diploma') {
+                if (isSCST) {
+                    amount = tuitionFee;
+                    amountLabel = `Full fee: ₹${tuitionFee.toLocaleString('en-IN')}`;
+                    explanations.push('✅ SC/ST students receive full tuition fee reimbursement for Diploma.');
+                } else {
+                    const cap = 20000;
+                    amount = Math.min(tuitionFee, cap);
+                    amountLabel = tuitionFee > cap
+                        ? `Capped: ₹${cap.toLocaleString('en-IN')} (fee was ₹${tuitionFee.toLocaleString('en-IN')})`
+                        : `Full fee: ₹${tuitionFee.toLocaleString('en-IN')}`;
+                    explanations.push(`✅ ${category} category diploma reimbursement capped at ₹${cap.toLocaleString('en-IN')}.`);
+                }
+            } else if (level === 'degree') {
+                if (isSCST) {
+                    amount = tuitionFee;
+                    amountLabel = `Full fee: ₹${tuitionFee.toLocaleString('en-IN')}`;
+                    explanations.push('✅ SC/ST students receive full fee reimbursement regardless of rank.');
+                } else if (rank > 0 && rank <= 10000) {
+                    amount = tuitionFee;
+                    amountLabel = `Full fee: ₹${tuitionFee.toLocaleString('en-IN')}`;
+                    explanations.push(`✅ Rank ${rank.toLocaleString('en-IN')} ≤ 10,000 → Full fee reimbursement.`);
+                } else {
+                    let cap = 35000;
+                    if (courseType === 'MBA') cap = 27000;
+                    else if (courseType === 'Degree') cap = 20000;
+
+                    amount = Math.min(tuitionFee, cap);
+                    const courseLabel = courseType === 'BTech' ? 'B.Tech' : courseType === 'MBA' ? 'MBA/MCA' : courseType;
+                    if (tuitionFee > cap) {
+                        amountLabel = `Capped at ₹${cap.toLocaleString('en-IN')} (fee: ₹${tuitionFee.toLocaleString('en-IN')})`;
+                        explanations.push(`✅ ${courseLabel} reimbursement capped at ₹${cap.toLocaleString('en-IN')}.`);
+                    } else {
+                        amountLabel = `Full fee: ₹${tuitionFee.toLocaleString('en-IN')}`;
+                        explanations.push(`✅ Fee within ${courseLabel} cap of ₹${cap.toLocaleString('en-IN')}.`);
+                    }
+                    if (rank > 10000) {
+                        explanations.push(`ℹ️ Rank ${rank.toLocaleString('en-IN')} > 10,000 — course fee cap applied.`);
+                    } else if (!rank) {
+                        explanations.push('ℹ️ No rank provided — course fee cap applied.');
+                    }
+                }
+            }
+
+            explanations.push(`✅ Eligible under ${category} category.`);
+            renderResult(eligible, amount, amountLabel, category, explanations, level);
+        });
+
+        function renderResult(eligible, amount, amountLabel, category, explanations, level) {
+            const resultContainer = document.getElementById('fre-result-container');
+            const docsContainer = document.getElementById('fre-docs-container');
+
+            const statusClass = eligible ? 'fre-result-eligible' : 'fre-result-ineligible';
+            const statusIcon = eligible ? '✅' : '❌';
+            const statusText = eligible ? 'Eligible' : 'Not Eligible';
+            const statusColor = eligible ? '#22863a' : '#da3633';
+
+            resultContainer.innerHTML = `
+                <div class="fre-result-card ${statusClass}">
+                    <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem;">${statusIcon}</span>
+                        <div>
+                            <h3 style="margin: 0; color: ${statusColor}; font-size: 1.3rem; font-weight: 700;">${statusText}</h3>
+                            <p style="margin: 0.2rem 0 0 0; color: #5a6c7d; font-size: 0.9rem;">Category: ${category}</p>
+                        </div>
+                    </div>
+                    ${eligible ? `
+                        <div style="margin: 1.5rem 0; padding: 1.2rem; background: white; border-radius: 10px; text-align: center; border: 1px solid #e8f0ff;">
+                            <div style="font-size: 0.85rem; color: #5a6c7d; font-weight: 600; margin-bottom: 0.3rem;">Estimated Reimbursement</div>
+                            <div class="fre-amount">₹${amount.toLocaleString('en-IN')}</div>
+                            <div style="font-size: 0.85rem; color: #5a6c7d; margin-top: 0.3rem;">${amountLabel}</div>
+                        </div>
+                    ` : ''}
+                    <div style="margin-top: 1rem;">
+                        <h4 style="color: #1a3a52; font-size: 1rem; font-weight: 700; margin: 0 0 0.8rem 0;">📋 Explanation</h4>
+                        <ul class="fre-explanation" style="margin: 0; padding-left: 1.2rem;">
+                            ${explanations.map(e => `<li>${e}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+
+            // Show documents only if eligible
+            if (eligible) {
+                const docs = getRequiredDocuments(level);
+                docsContainer.innerHTML = `
+                    <div class="fre-docs" style="background: #ffffff; border: 2px solid #e8f0ff; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+                        <h4 style="color: #1a3a52; font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.6rem;">
+                            <span>📄</span> Required Documents
+                        </h4>
+                        ${docs.map(d => `
+                            <div class="fre-doc-item">
+                                <span style="color: #4a90e2; font-weight: 700;">✔</span>
+                                <span>${d}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            } else {
+                docsContainer.innerHTML = '';
+            }
+
+            // Scroll to result
+            setTimeout(() => {
+                resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        function getRequiredDocuments(level) {
+            const base = ['Caste Certificate', 'Income Certificate', 'Aadhaar Card', 'Bonafide Certificate', 'Bank Passbook / Account Details'];
+            if (level === 'class-5-8') return base;
+            if (level === 'class-9-10') return base;
+            if (level === 'intermediate') return [...base, 'SSC Marks Memo'];
+            if (level === 'diploma') return [...base, 'SSC Marks Memo'];
+            if (level === 'degree') return [...base, 'EAPCET / ECET Rank Card', 'Previous Marks Memo (Inter / Diploma)'];
+            return base;
+        }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PLACEHOLDER TAB (Coming Soon)
+       ═══════════════════════════════════════════════════════════════ */
+
+    function renderPlaceholderTab(icon, title, description) {
+        return `
+        <div style="max-width: 600px; margin: 4rem auto; text-align: center;">
+            <div style="background: linear-gradient(135deg, #ffffff 0%, #f8fafb 100%); border: 2px solid #e8f0ff; border-radius: 16px; padding: 3rem 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">${icon}</div>
+                <h2 style="color: #1a3a52; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.8rem 0;">${title}</h2>
+                <p style="color: #5a6c7d; font-size: 1rem; line-height: 1.6; font-weight: 500; margin: 0 0 2rem 0;">${description}</p>
+                <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: #f0f8ff; border: 2px solid #4a90e2; border-radius: 30px; padding: 0.8rem 1.5rem;">
+                    <span style="font-size: 1.2rem;">🚧</span>
+                    <span style="color: #4a90e2; font-weight: 700; font-size: 0.95rem;">Coming Soon</span>
+                </div>
+                <p style="color: #b0bec5; font-size: 0.85rem; margin-top: 1.5rem; font-style: italic;">This feature is under development and will be available in a future update.</p>
+            </div>
+        </div>
+        `;
     }
 
 });
