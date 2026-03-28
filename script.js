@@ -267,8 +267,8 @@ document.addEventListener('DOMContentLoaded', () => {
             title = 'Fee Reimbursement Estimator';
             content = renderFeeReimbursementTab();
         } else if (tabName === 'subsidy-calculator') {
-            title = 'Subsidy Calculator';
-            content = renderPlaceholderTab('💰', 'Subsidy Calculator', 'Calculate exact financial benefits for scholarship schemes, farmer subsidies, and loan subsidies.');
+            title = 'Farmer Subsidy & Support Calculator';
+            content = window.renderSubsidyCalculatorTab ? window.renderSubsidyCalculatorTab() : renderPlaceholderTab('💰', 'Subsidy Calculator', 'Loading calculator module...');
         } else if (tabName === 'nearest-help') {
             title = 'Nearest Help Centre';
             content = renderPlaceholderTab('📍', 'Nearest Help Centre', 'Instantly locate your nearest MeeSeva centre or department office for physical assistance.');
@@ -287,6 +287,8 @@ document.addEventListener('DOMContentLoaded', () => {
             initFakeSchemeDetector();
         } else if (tabName === 'fee-reimbursement') {
             initFeeReimbursementEstimator();
+        } else if (tabName === 'subsidy-calculator') {
+            if (window.initSubsidyCalculator) window.initSubsidyCalculator();
         }
 
         function renderOverviewTab() {
