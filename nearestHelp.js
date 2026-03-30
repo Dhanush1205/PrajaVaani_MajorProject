@@ -80,9 +80,9 @@ window.renderNearestHelpTab = function() {
         .input-location { flex: 1; min-width: 200px; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px; }
     </style>
     <div class="help-center-container">
-        <p style="color: #5a6c7d; font-size: 1.1rem; margin-bottom: 1.5rem;">
+        <h2 style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
             Find your nearest MeeSeva, Common Service Centers (CSC), and Government help desks across Telangana & India.
-        </p>
+        </h2>
         
         <div class="controls-group">
             <button id="btn-geolocate" class="btn-primary btn-small" style="display: flex; align-items: center; gap: 0.5rem;">
