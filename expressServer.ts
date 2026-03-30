@@ -9,6 +9,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import path from 'path';
 import bcrypt from 'bcrypt';
+import rateLimit from 'express-rate-limit';
 import db, { runQuery, getQuery } from './database';
 import { checkEligibility, UserProfile, EligibilityResult } from './eligibilityChecker';
 
@@ -70,7 +71,15 @@ app.post('/api/register', async (req: Request, res: Response): Promise<void> => 
  * POST /api/login
  * Log in an existing user
  */
-app.post('/api/login', async (req: Request, res: Response): Promise<void> => {
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 3, // Limit each IP to 3 requests per windowMs
+  message: { error: 'Too many login attempts from this IP, please try again after 15 minutes' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.post('/api/login', loginLimiter, async (req: Request, res: Response): Promise<void> => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
