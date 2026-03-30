@@ -168,6 +168,10 @@ async def get_js():
 async def get_subsidy_calculator_js():
     return FileResponse("subsidyCalculator.js")
 
+@app.get("/nearestHelp.js")
+async def get_nearest_help_js():
+    return FileResponse("nearestHelp.js")
+
 @app.get("/schemes_dataset.json")
 async def get_schemes_dataset():
     return FileResponse("schemes_dataset.json")

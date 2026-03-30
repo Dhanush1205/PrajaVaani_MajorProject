@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
             content = window.renderSubsidyCalculatorTab ? window.renderSubsidyCalculatorTab() : renderPlaceholderTab('💰', 'Subsidy Calculator', 'Loading calculator module...');
         } else if (tabName === 'nearest-help') {
             title = 'Nearest Help Centre';
-            content = renderPlaceholderTab('📍', 'Nearest Help Centre', 'Instantly locate your nearest MeeSeva centre or department office for physical assistance.');
+            content = window.renderNearestHelpTab ? window.renderNearestHelpTab() : renderPlaceholderTab('📍', 'Nearest Help Centre', 'Loading nearest help module...');
         }
 
         // Common DOM Update
@@ -266,6 +266,8 @@ document.addEventListener('DOMContentLoaded', () => {
             initFeeReimbursementEstimator();
         } else if (tabName === 'subsidy-calculator') {
             if (window.initSubsidyCalculator) window.initSubsidyCalculator();
+        } else if (tabName === 'nearest-help') {
+            if (window.initNearestHelpCenter) window.initNearestHelpCenter();
         }
 
         function renderOverviewTab() {
@@ -1414,7 +1416,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
 
                     aud.onended = () => updateUI('stopped');
-                    
+
                     // Auto-play
                     aud.play().then(() => updateUI('playing')).catch(() => { });
                 }
