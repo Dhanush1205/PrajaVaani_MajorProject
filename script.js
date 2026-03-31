@@ -808,15 +808,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         </div>
 
-                        <div style="background: #f0f8ff; border: 2px solid #4a90e2; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
-                            <h4 style="color: #1a3a52; font-size: 0.95rem; font-weight: 700; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-                                <span>💬</span> Need Help?
-                            </h4>
-                            <p style="color: #5a6c7d; font-size: 0.9rem; margin: 0 0 1rem 0; line-height: 1.5;">Contact the scheme provider or visit the official portal for more information and guidance.</p>
-                            <button style="width: 100%; padding: 0.8rem; background: #4a90e2; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 0.9rem; transition: all 0.3s ease;" onMouseOver="this.style.backgroundColor='#357abd'" onMouseOut="this.style.backgroundColor='#4a90e2'" onclick="alert('Support page coming soon...')">
-                                Get Support
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>

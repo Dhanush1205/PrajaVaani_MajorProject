@@ -1,6 +1,6 @@
 // nearestHelp.js
 
-window.renderNearestHelpTab = function() {
+window.renderNearestHelpTab = function () {
     return `
     <style>
         .help-center-layout {
@@ -80,18 +80,18 @@ window.renderNearestHelpTab = function() {
         .input-location { flex: 1; min-width: 200px; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px; }
     </style>
     <div class="help-center-container">
-        <h2 style="color: #ffffff; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
-            Find your nearest MeeSeva, Common Service Centers (CSC), and Government help desks across Telangana & India.
+        <h2 style="color: #ffffff; font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+            Find your nearest MeeSeva, Common Service Centers (CSC), and Government help desks
         </h2>
         
         <div class="controls-group">
-            <button id="btn-geolocate" class="btn-primary btn-small" style="display: flex; align-items: center; gap: 0.5rem;">
+            <button id="btn-geolocate" class="btn-primary btn-small" style="display: inline-flex; width: auto; align-items: center; gap: 0.5rem; white-space: nowrap; flex: 0 0 auto;">
                 📍 Use My Location
             </button>
-            <div style="display: flex; align-items: center; justify-content: center; font-weight: bold; color: #888;">OR</div>
+            <div style="display: flex; align-items: center; justify-content: center; font-weight: bold; color: #888; flex: 0 0 auto;">OR</div>
             <div style="display: flex; flex: 1; gap: 0.5rem;">
                 <input type="text" id="input-city" class="input-location" placeholder="Enter City or Pincode...">
-                <button id="btn-search-city" class="btn-primary btn-small">Search</button>
+                <button id="btn-search-city" class="btn-primary btn-small" style="width: auto; white-space: nowrap; flex: 0 0 auto;">Search</button>
             </div>
             <select id="filter-type" style="padding: 0.6rem; border-radius: 6px; border: 1px solid #ccc;">
                 <option value="all">All Centers</option>
@@ -123,7 +123,7 @@ window.renderNearestHelpTab = function() {
     `;
 };
 
-window.initNearestHelpCenter = function() {
+window.initNearestHelpCenter = function () {
     let map = null;
     let markers = [];
     let userMarker = null;
@@ -135,7 +135,7 @@ window.initNearestHelpCenter = function() {
     const centersList = document.getElementById('centers-list');
     const loader = document.getElementById('centers-loading');
     const errorMsg = document.getElementById('help-error');
-    
+
     let currentUserLat = null;
     let currentUserLon = null;
     let allCenters = [];
@@ -153,15 +153,15 @@ window.initNearestHelpCenter = function() {
     initMap();
 
     function calculateDistance(lat1, lon1, lat2, lon2) {
-        const R = 6371; 
+        const R = 6371;
         const dLat = (lat2 - lat1) * Math.PI / 180;
         const dLon = (lon2 - lon1) * Math.PI / 180;
-        const a = 
-            Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
-            Math.sin(dLon/2) * Math.sin(dLon/2); 
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-        const d = R * c; 
+        const a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const d = R * c;
         return d;
     }
 
@@ -235,7 +235,7 @@ window.initNearestHelpCenter = function() {
         hideError();
         centersList.style.display = 'none';
         loader.style.display = 'block';
-        
+
         if (userMarker) {
             map.removeLayer(userMarker);
         }
@@ -245,7 +245,7 @@ window.initNearestHelpCenter = function() {
             iconSize: [24, 24],
             iconAnchor: [12, 24]
         });
-        userMarker = L.marker([lat, lon], {icon: userIcon, zIndexOffset: 1000}).addTo(map)
+        userMarker = L.marker([lat, lon], { icon: userIcon, zIndexOffset: 1000 }).addTo(map)
             .bindPopup("<b>You are here</b>").openPopup();
         map.setView([lat, lon], 12);
 
@@ -253,7 +253,7 @@ window.initNearestHelpCenter = function() {
         // we use a fast dynamic generator to simulate a clean local database query instantly.
         setTimeout(() => {
             allCenters = generateFastLocalCenters(lat, lon);
-            allCenters.sort((a,b) => a.distance - b.distance);
+            allCenters.sort((a, b) => a.distance - b.distance);
             renderCentersList(allCenters);
         }, 400); // Small 400ms delay to feel realistic and allow map to pan properly
     }
@@ -270,9 +270,9 @@ window.initNearestHelpCenter = function() {
             { name: "Municipal Ward Office", type: "government", addr: "Municipal Layout" },
             { name: "TSOnline Fast Service Center", type: "meeseva", addr: "Commercial Hub" },
         ];
-        
+
         const numCenters = 8 + Math.floor(Math.random() * 5);
-        for(let i=0; i < numCenters; i++) {
+        for (let i = 0; i < numCenters; i++) {
             const template = templates[i % templates.length];
             const latOff = (Math.random() - 0.5) * 0.08;
             const lonOff = (Math.random() - 0.5) * 0.08;
@@ -280,7 +280,7 @@ window.initNearestHelpCenter = function() {
             const clon = lon + lonOff;
             centers.push({
                 id: 'center_' + i,
-                name: template.name + (i > 7 ? " " + (i-6) : ""),
+                name: template.name + (i > 7 ? " " + (i - 6) : ""),
                 type: template.type,
                 lat: clat,
                 lon: clon,
@@ -297,7 +297,7 @@ window.initNearestHelpCenter = function() {
 
         const activeFilter = filterType.value;
         const filtered = centers.filter(c => activeFilter === 'all' || c.type === activeFilter);
-        
+
         let html = '';
         if (filtered.length === 0) {
             html = `<div style="padding: 1rem; color: #888; text-align: center;">No centers found matching the filter.</div>`;
@@ -308,7 +308,7 @@ window.initNearestHelpCenter = function() {
                 const distStr = center.distance < 1 ? (center.distance * 1000).toFixed(0) + " m" : center.distance.toFixed(1) + " km";
                 const typeIcon = center.type === 'meeseva' ? '💻' : '🏢';
                 const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${currentUserLat},${currentUserLon}&destination=${center.lat},${center.lon}`;
-                
+
                 const animDelay = index * 0.05;
                 html += `
                     <div class="center-item ${isNearest ? 'nearest' : ''}" onclick="window.focusCenter(${center.lat}, ${center.lon})" style="cursor: pointer; animation-delay: ${animDelay}s;">
@@ -338,7 +338,7 @@ window.initNearestHelpCenter = function() {
     function updateMarkers(centers) {
         markers.forEach(m => map.removeLayer(m));
         markers = [];
-        
+
         let group = [];
         if (currentUserLat) group.push([currentUserLat, currentUserLon]);
 
@@ -360,7 +360,7 @@ window.initNearestHelpCenter = function() {
                 ">${c.type === 'meeseva' ? '💻' : '🏢'}</div>
                 ${isNearest ? '<div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #28a745; color: white; padding: 2px 4px; border-radius: 3px; font-size: 10px; font-weight: bold; white-space: nowrap;">Nearest</div>' : ''}
             `;
-            
+
             const centIcon = L.divIcon({
                 html: iconHtml,
                 className: '',
@@ -376,17 +376,17 @@ window.initNearestHelpCenter = function() {
                 </div>
             `;
 
-            const m = L.marker([c.lat, c.lon], {icon: centIcon}).addTo(map).bindPopup(popupContent);
+            const m = L.marker([c.lat, c.lon], { icon: centIcon }).addTo(map).bindPopup(popupContent);
             markers.push(m);
             group.push([c.lat, c.lon]);
         });
-        
+
         if (group.length > 0) {
             map.fitBounds(L.latLngBounds(group).pad(0.1));
         }
     }
 
-    window.focusCenter = function(lat, lon) {
+    window.focusCenter = function (lat, lon) {
         if (map) {
             map.setView([lat, lon], 15);
         }
