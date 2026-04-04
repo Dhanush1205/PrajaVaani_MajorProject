@@ -1,6 +1,6 @@
 :root {
     /* Vibrant Palette */
-    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --bg-gradient: #81d4fa;
 
     /* Neon Accents */
     --primary-color: #ff6d00;
@@ -12,16 +12,16 @@
     /* Electric Blue */
 
     /* Text */
-    --text-main: #ffffff;
+    --text-main: #0f172a;
     /* White text for dark mode feel */
-    --text-muted: #b0bec5;
+    --text-muted: #475569;
     --text-dark: #1e293b;
     /* For inside light components if needed */
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(225, 245, 254, 0.6);
     /* More transparent */
-    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.4);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     --backdrop-blur: blur(16px);
 
@@ -99,14 +99,14 @@ body {
 }
 
 .background-pattern::before {
-    background: radial-gradient(circle, var(--primary-color), transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
     top: -10%;
     left: -10%;
     animation-delay: -5s;
 }
 
 .background-pattern::after {
-    background: radial-gradient(circle, var(--accent-blue), transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
     bottom: -10%;
     right: -10%;
 }
@@ -234,7 +234,7 @@ body {
     left: 1rem;
     width: 1.25rem;
     height: 1.25rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(15, 23, 42, 0.6);
     transition: color var(--transition-speed);
     z-index: 2;
 }
@@ -244,9 +244,9 @@ select,
 textarea {
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(225, 245, 254, 0.5);
     color: var(--text-main);
     font-size: 1rem;
     transition: all var(--transition-speed);
@@ -266,7 +266,7 @@ select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 15px rgba(255, 109, 0, 0.2);
 }
 
@@ -277,7 +277,7 @@ textarea:focus {
 
 .login-form input::placeholder,
 textarea::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(15, 23, 42, 0.5);
 }
 
 /* Password Toggle */
@@ -287,7 +287,7 @@ textarea::placeholder {
     background: none;
     border: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(15, 23, 42, 0.6);
     display: flex;
     align-items: center;
     transition: color var(--transition-speed);
@@ -374,7 +374,7 @@ textarea::placeholder {
 .divider::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .divider span {
@@ -406,7 +406,7 @@ textarea::placeholder {
 /* Glass Sidebar */
 .sidebar {
     width: 280px;
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(225, 245, 254, 0.7);
     /* Semi-transparent dark slate */
     backdrop-filter: var(--backdrop-blur);
     border-right: 1px solid var(--glass-border);
@@ -428,7 +428,7 @@ textarea::placeholder {
     font-weight: 800;
     color: var(--text-main);
     letter-spacing: -0.02em;
-    background: linear-gradient(to right, #ffffff, #b0bec5);
+    background: linear-gradient(to right, #0f172a, #475569);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -464,7 +464,7 @@ textarea::placeholder {
 
 /* Hover effect for nav items */
 .nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     color: var(--text-main);
     transform: translateX(4px);
 }
@@ -498,12 +498,12 @@ textarea::placeholder {
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(225, 245, 254, 0.5);
     /* Slight tint for content area */
 }
 
 .dashboard-header {
-    background: rgba(15, 23, 42, 0.4);
+    background: rgba(225, 245, 254, 0.6);
     backdrop-filter: var(--backdrop-blur);
     padding: 1.25rem 2.5rem;
     border-bottom: 1px solid var(--glass-border);
@@ -524,7 +524,7 @@ textarea::placeholder {
     gap: 1rem;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-pill);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
     border: 1px solid var(--glass-border);
 }
 
@@ -592,7 +592,7 @@ textarea::placeholder {
     font-size: 2.5rem;
     font-weight: 800;
     color: var(--text-main);
-    background: linear-gradient(to right, #fff, #e0e0e0);
+    background: linear-gradient(to right, #0f172a, #475569);
     -webkit-background-clip: text;
     background-clip: text;
 }
@@ -622,7 +622,7 @@ textarea::placeholder {
 }
 
 .queries-table th {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(15, 23, 42, 0.6);
     color: var(--text-muted);
     font-weight: 600;
     font-size: 0.85rem;
@@ -631,7 +631,7 @@ textarea::placeholder {
 }
 
 .queries-table tr:hover td {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 .queries-table tr:last-child td {
@@ -843,11 +843,11 @@ textarea::placeholder {
 }
 
 .info-box {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
     padding: 1.5rem;
     margin-bottom: 2rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(225, 245, 254, 0.5);
 }
 
 .info-box h4 {
@@ -1037,7 +1037,7 @@ textarea::placeholder {
 }
 
 .contact-btn:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .eligibility-card.not-eligible {
@@ -1257,7 +1257,7 @@ textarea::placeholder {
 /* Language Toggle */
 .lang-toggle-group {
     display: flex;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.8);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 3px;
@@ -1368,7 +1368,7 @@ textarea::placeholder {
 
 .message.ai .msg-text {
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-main);
     border-bottom-left-radius: 4px;
 }
@@ -1441,7 +1441,7 @@ textarea::placeholder {
     gap: 5px;
     padding: 0.8rem 1.1rem;
     background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 18px;
     border-bottom-left-radius: 4px;
     width: fit-content;
@@ -1659,7 +1659,7 @@ textarea::placeholder {
     align-items: center;
     gap: 5px;
     background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-muted);
     padding: 0.4rem 0.9rem;
     border-radius: var(--radius-pill);

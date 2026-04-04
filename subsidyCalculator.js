@@ -29,7 +29,7 @@
                 box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             }
             .sc-section-label {
-                background: #f0f8ff;
+                background: #e1f5fe;
                 border-left: 4px solid #4a90e2;
                 border-radius: 8px;
                 padding: 1rem;
@@ -69,7 +69,7 @@
             }
             .sc-checkbox-item:hover {
                 border-color: #4a90e2;
-                background: #f0f8ff;
+                background: #e1f5fe;
             }
             .sc-checkbox-item input {
                 width: 1.2rem;
@@ -88,7 +88,7 @@
             .sc-submit {
                 margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1.05rem;
                 padding: 1.1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-                color: white; border: none; border-radius: 8px; cursor: pointer;
+                color: #1e293b; border: none; border-radius: 8px; cursor: pointer;
                 transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(74,144,226,0.3);
                 text-transform: uppercase; letter-spacing: 0.5px;
             }

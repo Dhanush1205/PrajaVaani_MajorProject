@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 .overview-feature-card {
-                    background: #ffffff;
+                    background: #b3e5fc;
                     border: 1px solid #e8f0ff;
                     border-radius: 12px;
                     padding: 1.5rem;
@@ -305,7 +305,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .overview-feature-icon {
                     font-size: 1.8rem;
                     margin-right: 0.8rem;
-                    background: #f0f8ff;
+                    background: #e1f5fe;
                     width: 45px;
                     height: 45px;
                     display: flex;
@@ -460,17 +460,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     <form id="eligibility-form" style="display: grid; gap: 1.2rem; margin-top: 2rem;">
                         <!-- PERSONAL INFORMATION -->
-                        <div style="background: #f0f8ff; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem;">
+                        <div style="background: #e1f5fe; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem;">
                             <p style="margin: 0; font-size: 0.9rem; font-weight: 700; color: #1a3a52;">👤 Personal Information</p>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Age <span style="color: #e74c3c;">*</span></label>
-                                <input type="number" id="check-age" placeholder="e.g., 25" min="1" max="120" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <input type="number" id="check-age" placeholder="e.g., 25" min="1" max="120" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                             </div>
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Gender</label>
-                                <select id="check-gender" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <select id="check-gender" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                                     <option value="">Select Gender...</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Caste/Category</label>
-                                <select id="check-caste" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <select id="check-caste" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                                     <option value="">Select Category...</option>
                                     <option value="SC">SC (Scheduled Caste)</option>
                                     <option value="ST">ST (Scheduled Tribe)</option>
@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Occupation</label>
-                                <select id="check-occupation" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <select id="check-occupation" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                                     <option value="">Select Occupation...</option>
                                     <option value="farmer">Farmer</option>
                                     <option value="student">Student</option>
@@ -509,18 +509,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
 
                         <!-- ECONOMIC INFORMATION -->
-                        <div style="background: #f0f8ff; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
+                        <div style="background: #e1f5fe; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
                             <p style="margin: 0; font-size: 0.9rem; font-weight: 700; color: #1a3a52;">💰 Economic Information</p>
                         </div>
                         <div class="input-group">
                             <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Annual Income (₹)</label>
-                            <input type="number" id="check-income" placeholder="e.g., 200000" min="0" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                            <input type="number" id="check-income" placeholder="e.g., 200000" min="0" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                         </div>
 
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Ration Card Type</label>
-                                <select id="check-ration-card" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <select id="check-ration-card" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                                     <option value="">None</option>
                                     <option value="White">White</option>
                                     <option value="Yellow">Yellow</option>
@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Income Status</label>
-                                <select id="check-income-status" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <select id="check-income-status" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; cursor: pointer; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                                     <option value="">Select...</option>
                                     <option value="BPL">BPL (Below Poverty Line)</option>
                                     <option value="APL">APL (Above Poverty Line)</option>
@@ -539,22 +539,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
 
                         <!-- AGRICULTURE & LAND -->
-                        <div style="background: #f0f8ff; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
+                        <div style="background: #e1f5fe; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
                             <p style="margin: 0; font-size: 0.9rem; font-weight: 700; color: #1a3a52;">🌾 Agriculture & Land</p>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem;">
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Land Size (acres)</label>
-                                <input type="number" id="check-land-size" placeholder="e.g., 2.5" min="0" step="0.1" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <input type="number" id="check-land-size" placeholder="e.g., 2.5" min="0" step="0.1" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                             </div>
                             <div class="input-group">
                                 <label style="font-size: 0.95rem; font-weight: 600; color: #1a3a52; display: block; margin-bottom: 0.5rem;">Electricity Units/Month</label>
-                                <input type="number" id="check-units-consumed" placeholder="e.g., 200" min="0" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #ffffff; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
+                                <input type="number" id="check-units-consumed" placeholder="e.g., 200" min="0" style="width: 100%; padding: 0.9rem 1rem; border: 2px solid #d4e4f7; border-radius: 8px; font-size: 0.95rem; font-weight: 500; color: #1a3a52; background: #b3e5fc; transition: all 0.3s ease;" onFocus="this.style.borderColor='#4a90e2'; this.style.boxShadow='0 0 0 3px rgba(74,144,226,0.1)'" onBlur="this.style.borderColor='#d4e4f7'; this.style.boxShadow='none'">
                             </div>
                         </div>
 
                         <!-- STATUS & CHECKBOXES -->
-                        <div style="background: #f0f8ff; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
+                        <div style="background: #e1f5fe; border-left: 4px solid #4a90e2; border-radius: 8px; padding: 1rem; margin: 1rem 0 0.5rem 0;">
                             <p style="margin: 0; font-size: 0.9rem; font-weight: 700; color: #1a3a52;">✓ Your Status</p>
                         </div>
                         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
@@ -628,7 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </label>
                         </div>
 
-                        <button type="submit" class="btn-primary" id="check-btn" style="margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1rem; padding: 1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); color: white; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(74,144,226,0.3);">
+                        <button type="submit" class="btn-primary" id="check-btn" style="margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1rem; padding: 1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); color: #1e293b; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(74,144,226,0.3);">
                             ✓ Check Eligibility
                         </button>
                     </form>
@@ -708,11 +708,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="detail-layout" style="display: grid; grid-template-columns: 1fr 350px; gap: 2rem; margin-top: 1.5rem;">
                     <!-- Left Column - Comprehensive Details -->
-                    <div class="detail-content" style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid #e8f0ff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <div class="detail-content" style="background: #b3e5fc; padding: 2rem; border-radius: 12px; border: 1px solid #e8f0ff; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
                         <div class="detail-header" style="border-bottom: 2px solid #e8f0ff; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
                             <div style="display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1rem;">
                                 <div>
-                                    <span style="background: ${confidenceColor}; color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 0.5rem;">${scheme.category || 'Government Scheme'}</span>
+                                    <span style="background: ${confidenceColor}; color: #1e293b; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 0.5rem;">${scheme.category || 'Government Scheme'}</span>
                                     <h2 style="color: #1a3a52; font-size: 1.8rem; font-weight: 700; margin: 0.5rem 0;">${scheme.title}</h2>
                                 </div>
                                 <div style="text-align: right;">
@@ -726,7 +726,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h3 style="color: #1a3a52; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;">
                                 <span>💰</span> Benefits & Financial Assistance
                             </h3>
-                            <div style="background: linear-gradient(135deg, #f0f8ff 0%, #e8f4ff 100%); border: 2px solid #4a90e2; border-radius: 8px; padding: 1.2rem; color: #1a3a52; font-size: 1.05rem; font-weight: 600; line-height: 1.6;">
+                            <div style="background: linear-gradient(135deg, #e1f5fe 0%, #e8f4ff 100%); border: 2px solid #4a90e2; border-radius: 8px; padding: 1.2rem; color: #1a3a52; font-size: 1.05rem; font-weight: 600; line-height: 1.6;">
                                 ${schemeBenefits}
                             </div>
                         </div>
@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </p>
                             </div>
 
-                            <button style="width: 100%; padding: 1rem; margin-top: 1rem; background: ${isEligible ? '#22863a' : '#da3633'}; color: white; border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onMouseOver="this.style.transform='scale(1.02)'" onMouseOut="this.style.transform='scale(1)'" onclick="${scheme.apply_url ? `window.open('${scheme.apply_url}', '_blank')` : "alert('Official Application Portal for this scheme is coming soon! Please check back later.')"}">
+                            <button style="width: 100%; padding: 1rem; margin-top: 1rem; background: ${isEligible ? '#22863a' : '#da3633'}; color: #1e293b; border: none; border-radius: 6px; font-weight: 700; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15);" onMouseOver="this.style.transform='scale(1.02)'" onMouseOut="this.style.transform='scale(1)'" onclick="${scheme.apply_url ? `window.open('${scheme.apply_url}', '_blank')` : "alert('Official Application Portal for this scheme is coming soon! Please check back later.')"}">
                                 ${isEligible ? '📝 Apply Now' : '📋 Learn More'}
                             </button>
 
@@ -1533,7 +1533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ineligibleSchemes = results.ineligible || [];
 
         if (eligibleSchemes.length === 0 && ineligibleSchemes.length === 0) {
-            resultsDiv.innerHTML = `<div style="padding: 2rem; background: linear-gradient(135deg, #f0f8ff 0%, #e8f4ff 100%); border: 2px dashed #4a90e2; border-radius: 12px; text-align: center; color: #1a3a52; font-weight: 600; font-size: 1rem;">
+            resultsDiv.innerHTML = `<div style="padding: 2rem; background: linear-gradient(135deg, #e1f5fe 0%, #e8f4ff 100%); border: 2px dashed #4a90e2; border-radius: 12px; text-align: center; color: #1a3a52; font-weight: 600; font-size: 1rem;">
                 <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">📭</span>
                 No schemes found in database
             </div>`;
@@ -1560,7 +1560,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <h3 style="margin: 0.8rem 0; color: #1a3a52; font-size: 1.1rem; font-weight: 700;">${scheme.title}</h3>
                             <p style="font-size: 0.9rem; color: #5a6c7d; margin: 0.8rem 0; font-weight: 500;">🏢 ${scheme.government || 'Government Scheme'}</p>
-                            <button class="scheme-detail-btn view-more-details-btn" data-id="${scheme.id}" style="margin-top: 1.2rem; width: 100%; font-weight: 700; font-size: 0.95rem; padding: 0.9rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); color: white; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(74,144,226,0.2);">
+                            <button class="scheme-detail-btn view-more-details-btn" data-id="${scheme.id}" style="margin-top: 1.2rem; width: 100%; font-weight: 700; font-size: 0.95rem; padding: 0.9rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%); color: #1e293b; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 6px rgba(74,144,226,0.2);">
                                 📖 View More Details
                             </button>
                         </div>
@@ -1682,7 +1682,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     border: none;
                     border-radius: var(--radius-pill);
                     background: linear-gradient(45deg, #ff6d00, #ff9100);
-                    color: white;
+                    color: #1e293b;
                     font-weight: 700;
                     cursor: pointer;
                     transition: transform 0.3s;
@@ -1850,7 +1850,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 padding: 2rem;
             }
             .fre-section-label {
-                background: #f0f8ff;
+                background: #e1f5fe;
                 border-left: 4px solid #4a90e2;
                 border-radius: 8px;
                 padding: 1rem;
@@ -1874,7 +1874,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .fre-submit {
                 margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1rem;
                 padding: 1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-                color: white; border: none; border-radius: 8px; cursor: pointer;
+                color: #1e293b; border: none; border-radius: 8px; cursor: pointer;
                 transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(74,144,226,0.3);
             }
             .fre-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(74,144,226,0.4); }
@@ -2285,7 +2285,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (eligible) {
                 const docs = getRequiredDocuments(level);
                 docsContainer.innerHTML = `
-                    <div class="fre-docs" style="background: #ffffff; border: 2px solid #e8f0ff; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
+                    <div class="fre-docs" style="background: #b3e5fc; border: 2px solid #e8f0ff; border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
                         <h4 style="color: #1a3a52; font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem 0; display: flex; align-items: center; gap: 0.6rem;">
                             <span>📄</span> Required Documents
                         </h4>
@@ -2305,7 +2305,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const linkContainer = document.getElementById('fre-link-container');
             if (eligible) {
                 linkContainer.innerHTML = `
-                    <p style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #ffffff; font-weight: 500;">
+                    <p style="text-align: center; margin-top: 1.5rem; font-size: 1rem; color: #1e293b; font-weight: 500;">
                         For more information, visit 
                         <a href="https://telanganaepass.cgg.gov.in/" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; font-weight: 700; text-decoration: none; border-bottom: 2px solid rgba(96, 165, 250, 0.3); transition: all 0.2s ease;" onmouseover="this.style.borderBottomColor='#60a5fa'; this.style.color='#93c5fd'" onmouseout="this.style.borderBottomColor='rgba(96, 165, 250, 0.3)'; this.style.color='#60a5fa'">telanganaepass.cgg.gov.in ↗</a>
                     </p>
@@ -2342,7 +2342,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="font-size: 4rem; margin-bottom: 1rem;">${icon}</div>
                 <h2 style="color: #1a3a52; font-size: 1.8rem; font-weight: 700; margin: 0 0 0.8rem 0;">${title}</h2>
                 <p style="color: #5a6c7d; font-size: 1rem; line-height: 1.6; font-weight: 500; margin: 0 0 2rem 0;">${description}</p>
-                <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: #f0f8ff; border: 2px solid #4a90e2; border-radius: 30px; padding: 0.8rem 1.5rem;">
+                <div style="display: inline-flex; align-items: center; gap: 0.6rem; background: #e1f5fe; border: 2px solid #4a90e2; border-radius: 30px; padding: 0.8rem 1.5rem;">
                     <span style="font-size: 1.2rem;">🚧</span>
                     <span style="color: #4a90e2; font-weight: 700; font-size: 0.95rem;">Coming Soon</span>
                 </div>

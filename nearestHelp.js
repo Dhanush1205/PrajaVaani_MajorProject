@@ -45,7 +45,7 @@ window.renderNearestHelpTab = function () {
             animation: slideUp 0.4s ease-out backwards;
             border-radius: 8px;
             margin-bottom: 0.5rem;
-            background: #ffffff;
+            background: #b3e5fc;
             border: 1px solid transparent;
         }
         .center-item:hover {
@@ -55,7 +55,7 @@ window.renderNearestHelpTab = function () {
             transform: translateY(-2px);
         }
         .center-item.nearest {
-            background: linear-gradient(145deg, #f0f8ff, #ffffff);
+            background: linear-gradient(145deg, #e1f5fe, #ffffff);
             border-left: 4px solid #4a90e2;
             border-top: 1px solid #e8f0ff;
             border-right: 1px solid #e8f0ff;
@@ -80,7 +80,7 @@ window.renderNearestHelpTab = function () {
         .input-location { flex: 1; min-width: 200px; padding: 0.7rem; border: 1px solid #ccc; border-radius: 6px; }
     </style>
     <div class="help-center-container">
-        <h2 style="color: #ffffff; font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+        <h2 style="color: #1e293b; font-size: 1.6rem; font-weight: 800; margin-bottom: 1.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
             Find your nearest MeeSeva, Common Service Centers (CSC), and Government help desks
         </h2>
         
@@ -347,7 +347,7 @@ window.initNearestHelpCenter = function () {
             const iconHtml = `
                 <div style="
                     background: ${c.type === 'meeseva' ? '#e74c3c' : '#3498db'}; 
-                    color: white; 
+                    color: #1e293b; 
                     width: ${isNearest ? '36px' : '28px'}; 
                     height: ${isNearest ? '36px' : '28px'}; 
                     border-radius: 50%; 
