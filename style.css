@@ -1,6 +1,6 @@
 :root {
     /* Vibrant Palette */
-    --bg-gradient: #81d4fa;
+    --bg-gradient: linear-gradient(135deg, #81d4fa 0%, #ffb74d 100%);
 
     /* Neon Accents */
     --primary-color: #ff6d00;
@@ -19,8 +19,7 @@
     /* For inside light components if needed */
 
     /* Glassmorphism */
-    --glass-bg: rgba(225, 245, 254, 0.6);
-    /* More transparent */
+    --glass-bg: rgba(255, 255, 255, 0.4);
     --glass-border: rgba(255, 255, 255, 0.4);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     --backdrop-blur: blur(16px);
@@ -99,14 +98,14 @@ body {
 }
 
 .background-pattern::before {
-    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 70%);
     top: -10%;
     left: -10%;
     animation-delay: -5s;
 }
 
 .background-pattern::after {
-    background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
     bottom: -10%;
     right: -10%;
 }
@@ -153,14 +152,9 @@ body {
 .brand-name {
     font-size: 3.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
     letter-spacing: -0.04em;
     margin-bottom: 0.25rem;
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    /* Soft shadow for readability */
 }
 
 .brand-tagline {
@@ -406,7 +400,7 @@ textarea::placeholder {
 /* Glass Sidebar */
 .sidebar {
     width: 280px;
-    background: rgba(225, 245, 254, 0.7);
+    background: rgba(186, 230, 253, 0.6);
     /* Semi-transparent dark slate */
     backdrop-filter: var(--backdrop-blur);
     border-right: 1px solid var(--glass-border);
@@ -450,9 +444,9 @@ textarea::placeholder {
     border-radius: var(--radius-md);
     border: none;
     background: none;
-    color: var(--text-muted);
+    color: #000000;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: all 0.2s;
     text-align: left;
@@ -471,8 +465,8 @@ textarea::placeholder {
 
 .nav-item.active {
     background: linear-gradient(90deg, rgba(255, 109, 0, 0.15), transparent);
-    color: var(--primary-color);
-    font-weight: 600;
+    color: #000000;
+    font-weight: 700;
     border-left: 3px solid var(--primary-color);
 }
 
@@ -503,7 +497,7 @@ textarea::placeholder {
 }
 
 .dashboard-header {
-    background: rgba(225, 245, 254, 0.6);
+    background: rgba(186, 230, 253, 0.6);
     backdrop-filter: var(--backdrop-blur);
     padding: 1.25rem 2.5rem;
     border-bottom: 1px solid var(--glass-border);
@@ -1212,7 +1206,7 @@ textarea::placeholder {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    background: rgba(0, 0, 0, 0.25);
+    background: #ffffff;
     border-bottom: 1px solid var(--glass-border);
     flex-shrink: 0;
 }
@@ -1245,7 +1239,7 @@ textarea::placeholder {
 .bot-name {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--text-main);
+    color: #1a3a52;
     line-height: 1.2;
 }
 
@@ -1258,7 +1252,7 @@ textarea::placeholder {
 .lang-toggle-group {
     display: flex;
     background: rgba(255, 255, 255, 0.8);
-    border: 1px solid var(--glass-border);
+    border: 1px solid #ffb74d;
     border-radius: 20px;
     padding: 3px;
     gap: 2px;
@@ -1367,7 +1361,7 @@ textarea::placeholder {
 }
 
 .message.ai .msg-text {
-    background: rgba(255, 255, 255, 0.08);
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-main);
     border-bottom-left-radius: 4px;
@@ -1430,7 +1424,9 @@ textarea::placeholder {
 }
 
 
-.voice-btn.hidden { display: none !important; }
+.voice-btn.hidden {
+    display: none !important;
+}
 
 
 
@@ -1517,8 +1513,8 @@ textarea::placeholder {
     flex: 1;
     display: flex;
     gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid var(--glass-border);
+    background: #ffffff;
+    border: 2px solid var(--primary-color);
     border-radius: 2rem;
     padding: 0.4rem 0.4rem 0.4rem 0.9rem;
     transition: all 0.25s;
@@ -1658,7 +1654,7 @@ textarea::placeholder {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    background: rgba(255, 255, 255, 0.04);
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-muted);
     padding: 0.4rem 0.9rem;

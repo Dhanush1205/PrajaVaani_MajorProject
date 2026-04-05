@@ -42,6 +42,16 @@ try:
     if text.count('!') > 1:
         patterns.append("Excessive use of exclamations")
         
+    # Strongly reward official government domains
+    if bool(re.search(r'\.(gov\.in|nic\.in)\b', text_lower)):
+        patterns.append("Official government link found")
+        fake_prob = min(fake_prob, 0.15)
+        
+    # If the ML model predicts fake but our rules caught absolutely nothing, 
+    # we can throttle the risk score so it stays below the 50% threshold.
+    if len(patterns) == 0 and fake_prob > 0.49:
+        fake_prob = 0.49
+        
     label = "Fake / Scam" if fake_prob > 0.5 else "Real Scheme"
     
     print(json.dumps({

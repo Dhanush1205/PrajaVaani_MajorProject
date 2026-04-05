@@ -88,7 +88,7 @@
             .sc-submit {
                 margin-top: 2rem; width: 100%; font-weight: 700; font-size: 1.05rem;
                 padding: 1.1rem; background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
-                color: #1e293b; border: none; border-radius: 8px; cursor: pointer;
+                color: #ffffff; border: none; border-radius: 8px; cursor: pointer;
                 transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(74,144,226,0.3);
                 text-transform: uppercase; letter-spacing: 0.5px;
             }
