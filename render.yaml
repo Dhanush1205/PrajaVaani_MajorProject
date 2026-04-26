@@ -1,0 +1,19 @@
+services:
+  # The Node.js Express Server (User Auth & Eligibility API)
+  - type: web
+    name: prajavaani-api
+    env: node
+    buildCommand: npm install && npx tsc
+    startCommand: node dist/expressServer.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+
+  # The Python FastAPI Server (Serves the Frontend UI and Voice/NLP API)
+  - type: web
+    name: prajavaani-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
