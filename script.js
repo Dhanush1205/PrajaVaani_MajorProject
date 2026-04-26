@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Configuration & State ---
     // --- Configuration & State ---
     // --- Configuration & State ---
-    const API_BASE_URL = 'http://localhost:5000';
+    const API_BASE_URL = 'https://prajavaani-api-production.up.railway.app';
     const STATE = {
         currentUser: null,
         currentView: 'login-view',
