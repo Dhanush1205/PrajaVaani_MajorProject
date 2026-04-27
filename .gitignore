@@ -60,6 +60,16 @@ eligibility_results.json
 temp/
 tmp/
 
-# Ignored specific files
-render.yaml
-script.js
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Databases
+*.db
+*.sqlite3
+
+# Static Assets (Generated)
+static/audio/*.mp3
+static/temp/
